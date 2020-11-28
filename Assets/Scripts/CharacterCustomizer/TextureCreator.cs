@@ -30,8 +30,8 @@ public class TextureCreator : MonoBehaviour
 
     private void CreateRandomTexture()
     {
-        _currentIndex = (_currentIndex+1) % _textureCount;
-        _renderer.material.SetFloat(Vector143E64Ce11Ec74Afaa02A24Ca38Eefc70, _currentIndex);
+        //_currentIndex = (_currentIndex+1) % _textureCount;
+        //_renderer.material.mainTexture = 
         
         // Texture2D texture2D = new Texture2D(1024, 1024);
         // var headPixels = GetHeadTexture(Random.Range(0, _textureCount));
@@ -47,20 +47,20 @@ public class TextureCreator : MonoBehaviour
         return _textures[index].GetPixels(0, 535, 642, 489);
     }
 
-    // private IEnumerator LoadAllTextures()
-    // {
-    //     _textures = new Texture2D[3];
-    //
-    //     for (int i = 0; i < _textureCount; i++)
-    //     {
-    //         var handle = Addressables.LoadAssetAsync<Texture2D>((i+1).ToString());
-    //
-    //         yield return handle;
-    //
-    //         if (handle.Status == AsyncOperationStatus.Succeeded)
-    //         {
-    //             _textures[i] = handle.Result;
-    //         }
-    //     }
-    // }
+    private IEnumerator LoadAllTextures()
+    {
+        _textures = new Texture2D[3];
+    
+        for (int i = 0; i < _textureCount; i++)
+        {
+            var handle = Addressables.LoadAssetAsync<Texture2D>((i+1).ToString());
+    
+            yield return handle;
+    
+            if (handle.Status == AsyncOperationStatus.Succeeded)
+            {
+                _textures[i] = handle.Result;
+            }
+        }
+    }
 }
