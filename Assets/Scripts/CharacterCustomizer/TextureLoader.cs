@@ -1,34 +1,60 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
-using UnityEngine.ResourceManagement.ResourceLocations;
 
-
-// [CreateAssetMenu(fileName = "TextureAssetLocator")]
-// public class TextureAssetLocator : ScriptableObject
-// {
-//     private enum Key;
-// }
-
-public class TextureLoader : MonoBehaviour
+namespace CharacterCustomizer
 {
-    [SerializeField] private AssetLabelReference _assetLabelReference; 
-
-    private void Awake()
+    public class TextureLoader : MonoBehaviour
     {
-        StartAsyncLoadTextures();
-    }
+        public static TextureLoader Instance;
+    
+        [SerializeField] private AssetLabelReference _assetLabelReference;
 
-    public AsyncOperationHandle StartAsyncLoadTextures()
-    {
+        public IReadOnlyDictionary<CharacterSkinPart, List<CharacterSkinAsset>> SkinDictionary => _skinDictionary;
+
         
-        return Addressables.LoadAssetsAsync<Texture2D>(_assetLabelReference, LoadTextures);
-        
-    }
+        private Dictionary<CharacterSkinPart, List<CharacterSkinAsset>> _skinDictionary = new Dictionary<CharacterSkinPart, List<CharacterSkinAsset>>();
+    
+        private void Awake()
+        {
+            if (Instance != null)
+            {
+                Destroy(gameObject);
+                return;
+            }
+            Instance = this;
+            StartAsyncLoadTextures().Completed += OnLoadComplete;
+        }
 
-    private void LoadTextures(Texture2D tex)
-    {
-        Debug.Log("Loaded: " + tex.name);
+        private void OnLoadComplete(AsyncOperationHandle loadOperation)
+        {
+            Debug.Log("Load complete!");
+        }
+
+
+        public AsyncOperationHandle StartAsyncLoadTextures()
+        {
+        
+            return Addressables.LoadAssetsAsync<CharacterSkinAsset>(_assetLabelReference, LoadSkins);
+        
+        }
+
+        private void LoadSkins(CharacterSkinAsset skin)
+        {
+            Debug.Log("Loaded: " + skin.name);
+            if (_skinDictionary.ContainsKey(skin.CharacterSkinPart))
+            {
+                _skinDictionary[skin.CharacterSkinPart].Add(skin);
+            }
+            else
+            {
+                _skinDictionary[skin.CharacterSkinPart] = new List<CharacterSkinAsset>
+                {
+                    skin,
+                };
+            }
+        }
     }
 }

@@ -27,6 +27,7 @@ MonoBehaviour:
   m_GroupAssets:
   - {fileID: 11400000, guid: 64f533b1e197eca438249e7ad4221c6f, type: 2}
   - {fileID: 11400000, guid: fdeaeada38d690949adac6929c2637d9, type: 2}
+  - {fileID: 11400000, guid: a0f2a15e23564274fab52ac452ffb0ec, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1
@@ -68,6 +69,7 @@ MonoBehaviour:
   m_LabelTable:
     m_LabelNames:
     - default
+    - OutfitTextures
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 6ea0285999f72e54fa50c500974689fa, type: 2}

@@ -1,18 +1,23 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
-public class UIEvent : MonoBehaviour
+using CharacterCustomizer;
+using UnityEngine.Events;
+
+public class UIEvent<T,U> where T : UnityEvent<U>, new()
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private static T _instance;
 
-    // Update is called once per frame
-    void Update()
+    public static T Instance
     {
-        
+        get
+        {
+            if (_instance == null) _instance = new T();
+
+            return _instance;
+        }
     }
+}
+
+public class OnItemTypeSelected : UnityEvent<CharacterPart>
+{
+    
 }

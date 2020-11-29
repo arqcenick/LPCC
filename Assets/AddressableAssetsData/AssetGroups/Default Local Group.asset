@@ -21,20 +21,48 @@ MonoBehaviour:
     m_Address: 2
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 2800000, guid: 0472262c7da50104d87ca75abb670d00, type: 3}
-    m_TargetAsset: {fileID: 2800000, guid: 0472262c7da50104d87ca75abb670d00, type: 3}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 088e8d51eb5eb2d42a1407246d650167
+    m_Address: Assets/ItemData/Pants/Pants 1.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - OutfitTextures
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 208a905f4f3325d46b36bfa4885725fe
+    m_Address: Assets/ItemData/Pants/Pants 4.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - OutfitTextures
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 718250e0c62cc1d4e8fe2acbca0ecd36
     m_Address: 3
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 2800000, guid: 718250e0c62cc1d4e8fe2acbca0ecd36, type: 3}
-    m_TargetAsset: {fileID: 2800000, guid: 718250e0c62cc1d4e8fe2acbca0ecd36, type: 3}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 8977f54b162299b4e9bb49ef355ea65b
     m_Address: 1
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 2800000, guid: 8977f54b162299b4e9bb49ef355ea65b, type: 3}
-    m_TargetAsset: {fileID: 2800000, guid: 8977f54b162299b4e9bb49ef355ea65b, type: 3}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: a8d59d9aa788b804fbe02c6cb3e9a7ec
+    m_Address: Assets/ItemData/Pants/Pants 3.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - OutfitTextures
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: e00868b1e4165294db1a8582fe3988a9
+    m_Address: Assets/ItemData/Pants/Pants 2.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - OutfitTextures
+    m_MainAsset: {fileID: 11400000, guid: e00868b1e4165294db1a8582fe3988a9, type: 2}
+    m_TargetAsset: {fileID: 11400000, guid: e00868b1e4165294db1a8582fe3988a9, type: 2}
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: b9d67faeea540f742ba870a3ecf150a7, type: 2}
   m_SchemaSet:
