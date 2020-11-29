@@ -1,17 +1,22 @@
-﻿using System;
-using CharacterCustomizer;
+﻿using CharacterCustomizer;
 using UnityEngine;
 using UnityEngine.Serialization;
 
+
+public abstract class CharacterPartAsset : ScriptableObject
+{
+    
+}
+
 [CreateAssetMenu(menuName = "LPCC/CharacterItemAsset", fileName = "CharacterItemAsset", order = 1)]
 
-public class CharacterItemAsset : ScriptableObject
+public class CharacterItemAsset : CharacterPartAsset
 {
     
 }
 
 [CreateAssetMenu(menuName = "LPCC/CharacterSkinAsset", fileName = "CharacterSkinAsset", order = 0)]
-public class CharacterSkinAsset : ScriptableObject
+public class CharacterSkinAsset : CharacterPartAsset
 {
     protected bool Equals(CharacterSkinAsset other)
     {
@@ -34,31 +39,16 @@ public class CharacterSkinAsset : ScriptableObject
         }
     }
 
-    [Flags]
-    public enum CharacterClass
-    {
-        None = 0,
-        Marksman = 1,
-        Arcanum = 2,
-    }
-
     
     public Texture BaseMap;
     
     [SerializeField]
     private string _name = "default_item";
     
-    [SerializeField]
-    private CharacterClass _characterClass = CharacterClass.Arcanum;
+
     
     [FormerlySerializedAs("_characterPart")] [SerializeField]
     private CharacterSkinPart characterSkinPart;
-
-    [SerializeField] 
-    private int UnlockCost;
-
-    [SerializeField] 
-    private bool IsUnlocked = true;
 
     public CharacterSkinPart CharacterSkinPart => characterSkinPart;
 }
