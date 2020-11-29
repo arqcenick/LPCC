@@ -34,7 +34,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - BeardTex:
-        m_Texture: {fileID: 2800000, guid: 2c04d3af93eee314c9228b066fbdf8c4, type: 3}
+        m_Texture: {fileID: 2800000, guid: 86870b1c3a644484f8891cadd9ab2f8d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - PantsTex:
@@ -78,7 +78,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - TorsoTex:
-        m_Texture: {fileID: 2800000, guid: 67e566036bd2e224eb9b73b1831ffaff, type: 3}
+        m_Texture: {fileID: 2800000, guid: bea61eaac1a3cbc458c62ab53efa9955, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:

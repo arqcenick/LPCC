@@ -10,10 +10,20 @@ namespace CharacterCustomizer
         private static readonly int TorsoTex = Shader.PropertyToID("TorsoTex");
         private static readonly int ShoesTex = Shader.PropertyToID("ShoesTex");
         private static readonly int SkinTex = Shader.PropertyToID("SkinTex");
+        private static readonly int BeardTex = Shader.PropertyToID("BeardTex");
 
         private void Awake()
         {
             _meshRenderer = GetComponentInChildren<SkinnedMeshRenderer>();
+            GameEvent<OnCharacterModelDataUpdated, CharacterData>.Instance.AddListener(SetCharacterModel);
+        }
+
+        public void SetCharacterModel(CharacterData data)
+        {
+            foreach (var skinAsset in data.CharacterSkinAssets)
+            {
+                SetCharacterSkinAsset(skinAsset.Value);   
+            }
         }
 
 
@@ -22,6 +32,7 @@ namespace CharacterCustomizer
             switch (skin.CharacterSkinPart)
             {
                 case CharacterSkinPart.Skin:
+                    Debug.Log("What?");
                     _meshRenderer.material.SetTexture(SkinTex, skin.BaseMap);
                     break;
                 case CharacterSkinPart.Eye:
@@ -29,6 +40,8 @@ namespace CharacterCustomizer
                 case CharacterSkinPart.Eyebrow:
                     break;
                 case CharacterSkinPart.Beard:
+                    _meshRenderer.material.SetTexture(BeardTex, skin.BaseMap);
+
                     break;
                 case CharacterSkinPart.Hair:
                     break;

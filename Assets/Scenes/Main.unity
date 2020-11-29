@@ -756,6 +756,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8679318511628891093, guid: 9e50c997e26fb1b47817c6231f41247f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b51abbd2e4897044ea0618ddba432290, type: 2}
     - target: {fileID: 8762480846692195322, guid: 9e50c997e26fb1b47817c6231f41247f, type: 3}
       propertyPath: m_Name
       value: CameraSetup
@@ -802,6 +806,50 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8762480846692195323, guid: 9e50c997e26fb1b47817c6231f41247f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762480847052601929, guid: 9e50c997e26fb1b47817c6231f41247f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762480847052601931, guid: 9e50c997e26fb1b47817c6231f41247f, type: 3}
+      propertyPath: m_OcclusionCulling
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762480847052601931, guid: 9e50c997e26fb1b47817c6231f41247f, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762480847052601932, guid: 9e50c997e26fb1b47817c6231f41247f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.77068055
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762480847052601932, guid: 9e50c997e26fb1b47817c6231f41247f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.5478196
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762480847052601932, guid: 9e50c997e26fb1b47817c6231f41247f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.8837376
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762480847052601932, guid: 9e50c997e26fb1b47817c6231f41247f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.98382974
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762480847052601932, guid: 9e50c997e26fb1b47817c6231f41247f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.17783749
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762480847052601932, guid: 9e50c997e26fb1b47817c6231f41247f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.020941438
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762480847052601932, guid: 9e50c997e26fb1b47817c6231f41247f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.003785384
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762480847052601933, guid: 9e50c997e26fb1b47817c6231f41247f, type: 3}
+      propertyPath: m_CameraType
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -3,13 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
+using UnityEngine.Events;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using Random = UnityEngine.Random;
 
 
 namespace CharacterCustomizer
 {
-
+    public class OnCharacterModelDataUpdated : UnityEvent<CharacterData>
+    {
+    
+    }
+    
     public enum CharacterPart
     {
         Skin,
@@ -35,7 +40,7 @@ namespace CharacterCustomizer
     }
     public enum CharacterSkinPart
     {
-        Skin,
+        Skin = 0,
         Eye,
         Eyebrow,
         Beard,
@@ -61,12 +66,14 @@ namespace CharacterCustomizer
     
     public class CharacterCreator : MonoBehaviour
     {
+        [SerializeField] 
+        private CharacterDataAsset _characterDataAsset;
+        
         private CharacterData _characterData;
-
-
+        
         private void Start()
         {
-            
+            _characterData = new CharacterData();
             _characterData.CharacterSkinAssets = LoadDefaultCharacterSkins();
             _characterData.CharacterItemAssets = LoadDefaultCharacterItems();
             UpdateModel();
@@ -74,17 +81,27 @@ namespace CharacterCustomizer
 
         private void UpdateModel()
         {
-            
+            GameEvent<OnCharacterModelDataUpdated, CharacterData>.Instance.Invoke(_characterData);
         }
 
         private IReadOnlyDictionary<CharacterItemPart, CharacterPartAsset> LoadDefaultCharacterItems()
         {
-            return new Dictionary<CharacterItemPart, CharacterPartAsset>();
+
+            return null;
         }
 
         private IReadOnlyDictionary<CharacterSkinPart, CharacterSkinAsset> LoadDefaultCharacterSkins()
         {
-            return new Dictionary<CharacterSkinPart, CharacterSkinAsset>();
+            Dictionary<CharacterSkinPart, CharacterSkinAsset> parts = new Dictionary<CharacterSkinPart, CharacterSkinAsset>();
+            foreach (var characterSkinAsset in _characterDataAsset.CharacterSkinAssets)
+            {
+                if (characterSkinAsset != null)
+                {
+                    parts[characterSkinAsset.CharacterSkinPart] = characterSkinAsset;
+                }
+            }
+
+            return parts;
         }
         
         
