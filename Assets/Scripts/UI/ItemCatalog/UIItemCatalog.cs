@@ -12,6 +12,8 @@ namespace UI.ItemCatalog
         
         
         private List<UISkinElement> _partElements;
+
+        private CharacterPart _currentCatalogPage;
         private void Awake()
         {
             _partElements = GetComponentsInChildren<UISkinElement>().ToList();
@@ -23,9 +25,19 @@ namespace UI.ItemCatalog
         {
             StartCoroutine(GatherTextures(characterPart));
         }
+
+        private void OnItemSelected(int index)
+        {
+            
+        }
         
         private IEnumerator GatherTextures(CharacterPart characterPart)
         {
+            if (_currentCatalogPage == characterPart)
+            {
+                yield break;
+            }
+            
             if (characterPart > CharacterPart.EndOfSkins)
             {
                 

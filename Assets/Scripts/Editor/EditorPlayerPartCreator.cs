@@ -5,7 +5,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 
-public class EditorPlayerPardCreator : MonoBehaviour
+public class EditorPlayerPartCreator : MonoBehaviour
 {
     [MenuItem("LPCC/Create Player Parts")]
     public static void CreatePlayerParts()

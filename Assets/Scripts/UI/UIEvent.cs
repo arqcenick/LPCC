@@ -17,7 +17,5 @@ public class UIEvent<T,U> where T : UnityEvent<U>, new()
     }
 }
 
-public class OnItemTypeSelected : UnityEvent<CharacterPart>
-{
-    
-}
+public class OnItemTypeSelected : UnityEvent<CharacterPart>{}
+public class OnCharacterPartSelected : UnityEvent<int>{}
