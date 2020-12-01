@@ -34,7 +34,6 @@ namespace UI.ItemCatalog
         
         public void OnSelectionChanged(bool isSelected)
         {
-            Debug.Log(isSelected);
             if (isSelected)
             {
                 _selectionImage.DOKill();

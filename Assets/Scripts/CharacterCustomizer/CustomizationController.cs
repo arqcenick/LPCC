@@ -11,6 +11,7 @@ namespace CharacterCustomizer
         private static readonly int ShoesTex = Shader.PropertyToID("ShoesTex");
         private static readonly int SkinTex = Shader.PropertyToID("SkinTex");
         private static readonly int BeardTex = Shader.PropertyToID("BeardTex");
+        private static readonly int GlovesTex = Shader.PropertyToID("GlovesTex");
 
         private void Awake()
         {
@@ -32,7 +33,6 @@ namespace CharacterCustomizer
             switch (skin.CharacterSkinPart)
             {
                 case CharacterSkinPart.Skin:
-                    Debug.Log("What?");
                     _meshRenderer.material.SetTexture(SkinTex, skin.BaseMap);
                     break;
                 case CharacterSkinPart.Eye:
@@ -61,6 +61,7 @@ namespace CharacterCustomizer
                     _meshRenderer.material.SetTexture(ShoesTex, skin.BaseMap);
                     break;
                 case CharacterSkinPart.Glove:
+                    _meshRenderer.material.SetTexture(GlovesTex, skin.BaseMap);
                     break;
                 case CharacterSkinPart.Belt:
                     break;

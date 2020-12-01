@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 17702df99a5e4fd296a1837468694704, type: 3}
-  m_Name: Torso2
+  m_Name: Beard2_Color0
   m_EditorClassIdentifier: 
-  CharacterPart: {fileID: 11400000, guid: a95d9424e3560874cb6a03a47f05d661, type: 2}
-  Id: 1119a42a-32ab-49c0-b24e-83230d1f6c24
+  CharacterPart: {fileID: 11400000, guid: b284d36620b87b44b96056fae18705a5, type: 2}
+  Id: a6d226ac-5c09-452a-bd9f-b36104910880
   _characterClass: 2

@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 17702df99a5e4fd296a1837468694704, type: 3}
-  m_Name: Torso2
+  m_Name: Shoe1
   m_EditorClassIdentifier: 
-  CharacterPart: {fileID: 11400000, guid: a95d9424e3560874cb6a03a47f05d661, type: 2}
-  Id: 1119a42a-32ab-49c0-b24e-83230d1f6c24
+  CharacterPart: {fileID: 11400000, guid: ee2ea5cc4d68ac24c972d4e66fe09eaa, type: 2}
+  Id: 3f34bbe8-8ccc-4db9-b7cb-0931d072a92d
   _characterClass: 2

@@ -10,10 +10,9 @@ using Random = UnityEngine.Random;
 
 namespace CharacterCustomizer
 {
-    public class OnCharacterModelDataUpdated : UnityEvent<CharacterData>
-    {
+    public class OnCharacterModelDataUpdated : UnityEvent<CharacterData> {}
     
-    }
+    public class OnCharacterSkinModified : UnityEvent<CharacterSkinAsset>{}
     
     public enum CharacterPart
     {
@@ -70,7 +69,12 @@ namespace CharacterCustomizer
         private CharacterDataAsset _characterDataAsset;
         
         private CharacterData _characterData;
-        
+
+        private void Awake()
+        {
+            GameEvent<OnCharacterSkinModified, CharacterSkinAsset>.Instance.AddListener(OnCharacterSkinModified);
+        }
+
         private void Start()
         {
             _characterData = new CharacterData();
@@ -79,18 +83,24 @@ namespace CharacterCustomizer
             UpdateModel();
         }
 
+        private void OnCharacterSkinModified(CharacterSkinAsset asset)
+        {
+            _characterData.CharacterSkinAssets[asset.CharacterSkinPart] = asset;
+            UpdateModel();
+        }
+        
         private void UpdateModel()
         {
             GameEvent<OnCharacterModelDataUpdated, CharacterData>.Instance.Invoke(_characterData);
         }
 
-        private IReadOnlyDictionary<CharacterItemPart, CharacterPartAsset> LoadDefaultCharacterItems()
+        private Dictionary<CharacterItemPart, CharacterPartAsset> LoadDefaultCharacterItems()
         {
 
             return null;
         }
 
-        private IReadOnlyDictionary<CharacterSkinPart, CharacterSkinAsset> LoadDefaultCharacterSkins()
+        private Dictionary<CharacterSkinPart, CharacterSkinAsset> LoadDefaultCharacterSkins()
         {
             Dictionary<CharacterSkinPart, CharacterSkinAsset> parts = new Dictionary<CharacterSkinPart, CharacterSkinAsset>();
             foreach (var characterSkinAsset in _characterDataAsset.CharacterSkinAssets)

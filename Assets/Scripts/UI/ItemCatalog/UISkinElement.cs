@@ -28,7 +28,8 @@ namespace UI.ItemCatalog
     
     public class UISkinElement : UIPartElement
     {
-        public CharacterSkinAsset _skin;
+        public CharacterSkinAsset Skin => _skin;
+        private CharacterSkinAsset _skin;
 
         private void Awake()
         {

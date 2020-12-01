@@ -19,6 +19,7 @@ namespace UI.ItemCatalog
             _partElements = GetComponentsInChildren<UISkinElement>().ToList();
 
             UIEvent<OnItemTypeSelected, CharacterPart>.Instance.AddListener(OnItemTypeSelected);
+            UIEvent<OnCharacterPartSelected, int>.Instance.AddListener(OnItemSelected);
         }
 
         private void OnItemTypeSelected(CharacterPart characterPart)
@@ -28,7 +29,7 @@ namespace UI.ItemCatalog
 
         private void OnItemSelected(int index)
         {
-            
+            GameEvent<OnCharacterSkinModified, CharacterSkinAsset>.Instance.Invoke(_partElements[index].Skin);
         }
         
         private IEnumerator GatherTextures(CharacterPart characterPart)
@@ -42,10 +43,10 @@ namespace UI.ItemCatalog
             {
                 
             }
-            else
+            else if(TextureLoader.Instance.SkinDictionary.ContainsKey((CharacterSkinPart) characterPart))
             {
+                _currentCatalogPage = characterPart;
                 CharacterSkinPart skinPart = (CharacterSkinPart) characterPart;
-                Debug.Log(skinPart);
                 var skinAssets = TextureLoader.Instance.SkinDictionary[skinPart];
                 var elements = new UISkinElement[skinAssets.Count];
                 for (int i = 0; i < _partElements.Count; i++)

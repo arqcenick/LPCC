@@ -22,50 +22,64 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - OutfitTextures
-    m_MainAsset: {fileID: 11400000, guid: 088e8d51eb5eb2d42a1407246d650167, type: 2}
-    m_TargetAsset: {fileID: 11400000, guid: 088e8d51eb5eb2d42a1407246d650167, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 0d9c9f17032013b48ad7de30d3a9a09c
     m_Address: Assets/ItemData/Torso/Torso 4.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - OutfitTextures
-    m_MainAsset: {fileID: 11400000, guid: 0d9c9f17032013b48ad7de30d3a9a09c, type: 2}
-    m_TargetAsset: {fileID: 11400000, guid: 0d9c9f17032013b48ad7de30d3a9a09c, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 208a905f4f3325d46b36bfa4885725fe
     m_Address: Assets/ItemData/Pants/Pants 4.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - OutfitTextures
-    m_MainAsset: {fileID: 11400000, guid: 208a905f4f3325d46b36bfa4885725fe, type: 2}
-    m_TargetAsset: {fileID: 11400000, guid: 208a905f4f3325d46b36bfa4885725fe, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 4661750b661e3c648b854231dcdaca41
     m_Address: Assets/ItemData/Torso/Torso 5.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - OutfitTextures
-    m_MainAsset: {fileID: 11400000, guid: 4661750b661e3c648b854231dcdaca41, type: 2}
-    m_TargetAsset: {fileID: 11400000, guid: 4661750b661e3c648b854231dcdaca41, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 88b97d2c393e88043a4208686b691c32
+    m_Address: Assets/ItemData/Gloves/Glove 2.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - OutfitTextures
+    m_MainAsset: {fileID: 11400000, guid: 88b97d2c393e88043a4208686b691c32, type: 2}
+    m_TargetAsset: {fileID: 11400000, guid: 88b97d2c393e88043a4208686b691c32, type: 2}
   - m_GUID: 9fa8ce96ab9af1c43988d19562ae310f
     m_Address: Assets/ItemData/Torso/Torso 3.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - OutfitTextures
-    m_MainAsset: {fileID: 11400000, guid: 9fa8ce96ab9af1c43988d19562ae310f, type: 2}
-    m_TargetAsset: {fileID: 11400000, guid: 9fa8ce96ab9af1c43988d19562ae310f, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: a8d59d9aa788b804fbe02c6cb3e9a7ec
     m_Address: Assets/ItemData/Pants/Pants 3.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - OutfitTextures
-    m_MainAsset: {fileID: 11400000, guid: a8d59d9aa788b804fbe02c6cb3e9a7ec, type: 2}
-    m_TargetAsset: {fileID: 11400000, guid: a8d59d9aa788b804fbe02c6cb3e9a7ec, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: a95d9424e3560874cb6a03a47f05d661
     m_Address: Assets/ItemData/Torso/Torso 2.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - OutfitTextures
-    m_MainAsset: {fileID: 11400000, guid: a95d9424e3560874cb6a03a47f05d661, type: 2}
-    m_TargetAsset: {fileID: 11400000, guid: a95d9424e3560874cb6a03a47f05d661, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: acfc833da92c1194a986762a8e6536c8
+    m_Address: Assets/ItemData/Gloves/Glove 1.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - OutfitTextures
+    m_MainAsset: {fileID: 11400000, guid: acfc833da92c1194a986762a8e6536c8, type: 2}
+    m_TargetAsset: {fileID: 11400000, guid: acfc833da92c1194a986762a8e6536c8, type: 2}
   - m_GUID: b284d36620b87b44b96056fae18705a5
     m_Address: Assets/ItemData/Beards/CharacterSkinAsset 1.asset
     m_ReadOnly: 0
@@ -85,43 +99,43 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - OutfitTextures
-    m_MainAsset: {fileID: 11400000, guid: c73486fa28b3257419d7c21f1aea8e18, type: 2}
-    m_TargetAsset: {fileID: 11400000, guid: c73486fa28b3257419d7c21f1aea8e18, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: cfffb4379233d0440b3cca1e8747c4ff
     m_Address: Assets/ItemData/Shoe/CharacterSkinAsset.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - OutfitTextures
-    m_MainAsset: {fileID: 11400000, guid: cfffb4379233d0440b3cca1e8747c4ff, type: 2}
-    m_TargetAsset: {fileID: 11400000, guid: cfffb4379233d0440b3cca1e8747c4ff, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: d75a7a0a79408a541858ae086e4f9df6
     m_Address: Assets/ItemData/Skin/Skin 1.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - OutfitTextures
-    m_MainAsset: {fileID: 11400000, guid: d75a7a0a79408a541858ae086e4f9df6, type: 2}
-    m_TargetAsset: {fileID: 11400000, guid: d75a7a0a79408a541858ae086e4f9df6, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: e00868b1e4165294db1a8582fe3988a9
     m_Address: Assets/ItemData/Pants/Pants 2.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - OutfitTextures
-    m_MainAsset: {fileID: 11400000, guid: e00868b1e4165294db1a8582fe3988a9, type: 2}
-    m_TargetAsset: {fileID: 11400000, guid: e00868b1e4165294db1a8582fe3988a9, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: ee2ea5cc4d68ac24c972d4e66fe09eaa
     m_Address: Assets/ItemData/Shoe/CharacterSkinAsset 1.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - OutfitTextures
-    m_MainAsset: {fileID: 11400000, guid: ee2ea5cc4d68ac24c972d4e66fe09eaa, type: 2}
-    m_TargetAsset: {fileID: 11400000, guid: ee2ea5cc4d68ac24c972d4e66fe09eaa, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: f34fcdcc37ece4c4481a12b259ed10da
     m_Address: Assets/ItemData/Torso/Torso 1.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - OutfitTextures
-    m_MainAsset: {fileID: 11400000, guid: f34fcdcc37ece4c4481a12b259ed10da, type: 2}
-    m_TargetAsset: {fileID: 11400000, guid: f34fcdcc37ece4c4481a12b259ed10da, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: b9d67faeea540f742ba870a3ecf150a7, type: 2}
   m_SchemaSet:

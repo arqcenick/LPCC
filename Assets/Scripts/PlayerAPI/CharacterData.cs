@@ -6,6 +6,6 @@ using CharacterCustomizer;
 
 public class CharacterData
 {
-    public IReadOnlyDictionary<CharacterSkinPart, CharacterSkinAsset> CharacterSkinAssets;
-    public IReadOnlyDictionary<CharacterItemPart, CharacterPartAsset> CharacterItemAssets;
+    public Dictionary<CharacterSkinPart, CharacterSkinAsset> CharacterSkinAssets;
+    public Dictionary<CharacterItemPart, CharacterPartAsset> CharacterItemAssets;
 }
