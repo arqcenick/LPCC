@@ -26,11 +26,6 @@ namespace UI.ItemCatalog
             _originalColor = _selectionImage.color;
             _originalIconColor = _iconImage.color;
         }
-
-        public void DebugTogge()
-        {
-            Debug.Log("toggled");
-        }
         
         public void OnSelectionChanged(bool isSelected)
         {

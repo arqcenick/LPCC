@@ -37,6 +37,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: 86870b1c3a644484f8891cadd9ab2f8d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - BeltTex:
+        m_Texture: {fileID: 2800000, guid: 17ae3c0b2a25c164cad9b4f358e05208, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - GlovesTex:
         m_Texture: {fileID: 2800000, guid: 23318282888b75d428b4daa037cdf765, type: 3}
         m_Scale: {x: 1, y: 1}

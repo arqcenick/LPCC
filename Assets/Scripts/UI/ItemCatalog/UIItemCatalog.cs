@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using CharacterCustomizer;
 using UnityEngine;
 
@@ -9,35 +7,56 @@ namespace UI.ItemCatalog
 {
     public class UIItemCatalog : MonoBehaviour
     {
-        
-        
-        private List<UISkinElement> _partElements;
-
+        private UIItemContainer[] _itemContainers;
+        private UIItemContainer _activeContainer;
+        private int _activeContainerIndex = 0;
         private CharacterPart _currentCatalogPage;
+
         private void Awake()
         {
-            _partElements = GetComponentsInChildren<UISkinElement>().ToList();
+
+            SetActiveContainers();
 
             UIEvent<OnItemTypeSelected, CharacterPart>.Instance.AddListener(OnItemTypeSelected);
             UIEvent<OnCharacterPartSelected, int>.Instance.AddListener(OnItemSelected);
+            
+            
+        }
+
+        private void SetActiveContainers()
+        {
+            _itemContainers = GetComponentsInChildren<UIItemContainer>();
+            _activeContainer = _itemContainers[_activeContainerIndex];
+
         }
 
         private void OnItemTypeSelected(CharacterPart characterPart)
         {
-            StartCoroutine(GatherTextures(characterPart));
+            if (_currentCatalogPage != characterPart)
+            {
+                _currentCatalogPage = characterPart;
+
+                //_activeContainer.gameObject.SetActive(false);
+                _activeContainer.Hide();
+                
+                _activeContainerIndex = (_activeContainerIndex + 1) % _itemContainers.Length;
+                _activeContainer = _itemContainers[_activeContainerIndex];   
+                _activeContainer.Show();
+
+                StartCoroutine(GatherTextures(characterPart));
+
+            }
+
         }
 
         private void OnItemSelected(int index)
         {
-            GameEvent<OnCharacterSkinModified, CharacterSkinAsset>.Instance.Invoke(_partElements[index].Skin);
+            var skinAsset = _activeContainer.PartElements[index].Skin;
+            GameEvent<OnCharacterSkinModified, CharacterSkinAsset>.Instance.Invoke(skinAsset);
         }
         
         private IEnumerator GatherTextures(CharacterPart characterPart)
         {
-            if (_currentCatalogPage == characterPart)
-            {
-                yield break;
-            }
             
             if (characterPart > CharacterPart.EndOfSkins)
             {
@@ -45,22 +64,20 @@ namespace UI.ItemCatalog
             }
             else if(TextureLoader.Instance.SkinDictionary.ContainsKey((CharacterSkinPart) characterPart))
             {
-                _currentCatalogPage = characterPart;
                 CharacterSkinPart skinPart = (CharacterSkinPart) characterPart;
                 var skinAssets = TextureLoader.Instance.SkinDictionary[skinPart];
-                var elements = new UISkinElement[skinAssets.Count];
-                for (int i = 0; i < _partElements.Count; i++)
+                var partElements = _activeContainer.PartElements;
+                for (int i = 0; i < partElements.Count; i++)
                 {
                     if (i < skinAssets.Count)
                     {
-                        _partElements[i].gameObject.SetActive(true);
-                        _partElements[i].SetSkin(skinAssets[i]);
+                        partElements[i].gameObject.SetActive(true);
+                        partElements[i].SetSkin(skinAssets[i]);
                         yield return new WaitForEndOfFrame();
-                        elements[i] = _partElements[i];
                     }
                     else
                     {
-                        _partElements[i].gameObject.SetActive(false);
+                        partElements[i].gameObject.SetActive(false);
                     }
                     
                 
