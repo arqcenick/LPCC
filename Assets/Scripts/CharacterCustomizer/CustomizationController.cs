@@ -16,7 +16,7 @@ namespace CharacterCustomizer
         private void Awake()
         {
             _meshRenderer = GetComponentInChildren<SkinnedMeshRenderer>();
-            GameEvent<OnCharacterModelDataUpdated, CharacterData>.Instance.AddListener(SetCharacterModel);
+            GameEventSingleton<OnCharacterModelDataUpdated, CharacterData>.Instance.AddListener(SetCharacterModel);
         }
 
         public void SetCharacterModel(CharacterData data)

@@ -109,8 +109,8 @@ RectTransform:
   - {fileID: 5516167873666322825}
   - {fileID: 1497498387425887663}
   - {fileID: 5716868672844978063}
-  - {fileID: 5321502663941875487}
   - {fileID: 5002011979878358922}
+  - {fileID: 5321502663941875487}
   - {fileID: 9063739746725968714}
   - {fileID: 2270303953035548102}
   m_Father: {fileID: 8017361222919090884}
@@ -170,7 +170,7 @@ PrefabInstance:
     - target: {fileID: 133306227764383077, guid: 4865a15bf782301408f1de5b5a8cb07e, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 8c1def1e29bb89f4f82be0223d77b7ce, type: 3}
+      objectReference: {fileID: 21300000, guid: 68d11eb9e378d174d8f53a4db9b03312, type: 3}
     - target: {fileID: 511569760377235436, guid: 4865a15bf782301408f1de5b5a8cb07e, type: 3}
       propertyPath: m_IsOn
       value: 0
@@ -189,7 +189,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5012523095662555932, guid: 4865a15bf782301408f1de5b5a8cb07e, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5012523095662555932, guid: 4865a15bf782301408f1de5b5a8cb07e, type: 3}
       propertyPath: m_AnchorMax.x
@@ -265,11 +265,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5012523095662555939, guid: 4865a15bf782301408f1de5b5a8cb07e, type: 3}
       propertyPath: m_Name
-      value: Bottom
+      value: AltWeapon
       objectReference: {fileID: 0}
     - target: {fileID: 8064366135120626333, guid: 4865a15bf782301408f1de5b5a8cb07e, type: 3}
       propertyPath: _characterPart
-      value: 8
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4865a15bf782301408f1de5b5a8cb07e, type: 3}
@@ -406,7 +406,7 @@ PrefabInstance:
     - target: {fileID: 133306227764383077, guid: 4865a15bf782301408f1de5b5a8cb07e, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 984fc792ae1cbb845a8f08069ab76a98, type: 3}
+      objectReference: {fileID: 21300000, guid: af0a7c9e87401d14cb86597631926731, type: 3}
     - target: {fileID: 511569760377235436, guid: 4865a15bf782301408f1de5b5a8cb07e, type: 3}
       propertyPath: m_IsOn
       value: 0
@@ -501,11 +501,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5012523095662555939, guid: 4865a15bf782301408f1de5b5a8cb07e, type: 3}
       propertyPath: m_Name
-      value: TorsoArmor
+      value: Weapon
       objectReference: {fileID: 0}
     - target: {fileID: 8064366135120626333, guid: 4865a15bf782301408f1de5b5a8cb07e, type: 3}
       propertyPath: _characterPart
-      value: 17
+      value: 19
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4865a15bf782301408f1de5b5a8cb07e, type: 3}
@@ -543,7 +543,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5012523095662555932, guid: 4865a15bf782301408f1de5b5a8cb07e, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5012523095662555932, guid: 4865a15bf782301408f1de5b5a8cb07e, type: 3}
       propertyPath: m_AnchorMax.x
@@ -741,7 +741,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8064366135120626333, guid: 4865a15bf782301408f1de5b5a8cb07e, type: 3}
       propertyPath: _characterPart
-      value: 18
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4865a15bf782301408f1de5b5a8cb07e, type: 3}
@@ -874,7 +874,7 @@ PrefabInstance:
     - target: {fileID: 133306227764383077, guid: 4865a15bf782301408f1de5b5a8cb07e, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 1025f25cc3ed1d84588339bc871c3b17, type: 3}
+      objectReference: {fileID: 21300000, guid: 984fc792ae1cbb845a8f08069ab76a98, type: 3}
     - target: {fileID: 511569760377235436, guid: 4865a15bf782301408f1de5b5a8cb07e, type: 3}
       propertyPath: m_IsOn
       value: 0

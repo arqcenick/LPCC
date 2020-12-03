@@ -14,16 +14,17 @@ namespace UI
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Alpha1))
             {
-                if (_animator.GetCurrentAnimatorStateInfo(0).IsName("Face"))
-                {
-                    _animator.Play("FullBody");
-                }
-                else if (_animator.GetCurrentAnimatorStateInfo(0).IsName("FullBody"))
-                {
-                    _animator.Play("Face");
-                }
+               UIEventSingleton<OnOverviewMenuSelected>.Instance.Invoke();
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                UIEventSingleton<OnHeroMenuSelected>.Instance.Invoke();
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha3))
+            {
+                UIEventSingleton<OnItemMenuSelected>.Instance.Invoke();
             }
         }
     }

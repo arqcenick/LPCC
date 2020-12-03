@@ -17,8 +17,8 @@ namespace UI.ItemCatalog
 
             SetActiveContainers();
 
-            UIEvent<OnItemTypeSelected, CharacterPart>.Instance.AddListener(OnItemTypeSelected);
-            UIEvent<OnCharacterPartSelected, int>.Instance.AddListener(OnItemSelected);
+            UIEventSingleton<OnItemTypeSelected, CharacterPart>.Instance.AddListener(OnItemTypeSelected);
+            UIEventSingleton<OnCharacterPartSelected, int>.Instance.AddListener(OnItemSelected);
             
             
         }
@@ -46,13 +46,12 @@ namespace UI.ItemCatalog
                 StartCoroutine(GatherTextures(characterPart));
 
             }
-
         }
 
         private void OnItemSelected(int index)
         {
             var skinAsset = _activeContainer.PartElements[index].Skin;
-            GameEvent<OnCharacterSkinModified, CharacterSkinAsset>.Instance.Invoke(skinAsset);
+            GameEventSingleton<OnCharacterSkinModified, CharacterSkinAsset>.Instance.Invoke(skinAsset);
         }
         
         private IEnumerator GatherTextures(CharacterPart characterPart)

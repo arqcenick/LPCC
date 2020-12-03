@@ -36,7 +36,7 @@ namespace UI.ItemCatalog
 
         public void OnPointerClick(PointerEventData eventData)
         {
-            UIEvent<OnCharacterPartSelected, int>.Instance.Invoke(transform.GetSiblingIndex());
+            UIEventSingleton<OnCharacterPartSelected, int>.Instance.Invoke(transform.GetSiblingIndex());
         }
     }
 }

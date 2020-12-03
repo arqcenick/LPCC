@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: M_Mannequin
-  m_Shader: {fileID: -6465566751694194690, guid: 98e4c69514ddd18438368c6db305ec73, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 0a90d04f08db0d3418edd00a44edfbce, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -50,7 +50,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - ShoesTex:
-        m_Texture: {fileID: 2800000, guid: f501470e07647b9458f9a37f436e4e78, type: 3}
+        m_Texture: {fileID: 2800000, guid: c147fc6bb0f051e48b34ba9b9c75691f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - SkinTex:
@@ -101,6 +101,34 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _CombinerSubGraph_9B6AB15E_Texture2D24C30942_1446014946:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _CombinerSubGraph_9B6AB15E_Texture2D2ECE2A09_2159245685:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _CombinerSubGraph_9B6AB15E_Texture2D659635C4_1477016065:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _CombinerSubGraph_9B6AB15E_Texture2D66A9D0D6_2828071339:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _CombinerSubGraph_9B6AB15E_Texture2D69E96C27_1238500761:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _CombinerSubGraph_9B6AB15E_Texture2D82824509_621929935:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _CombinerSubGraph_9B6AB15E_Texture2DE91860EB_340509362:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -118,7 +146,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 22ca1b03feee9b647a35ad5398ea4d7f, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:

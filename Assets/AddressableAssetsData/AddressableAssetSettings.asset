@@ -27,6 +27,7 @@ MonoBehaviour:
   m_GroupAssets:
   - {fileID: 11400000, guid: 64f533b1e197eca438249e7ad4221c6f, type: 2}
   - {fileID: 11400000, guid: fdeaeada38d690949adac6929c2637d9, type: 2}
+  - {fileID: 11400000, guid: 660e64b05e7b6814fa1609a5674eaa54, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1
@@ -69,6 +70,7 @@ MonoBehaviour:
     m_LabelNames:
     - default
     - OutfitTextures
+    - Heroes
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 6ea0285999f72e54fa50c500974689fa, type: 2}
@@ -95,7 +97,7 @@ MonoBehaviour:
           m_Key: HostingServicePort
         - m_AssemblyName: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
           m_ClassName: System.String
-          m_Data: Library/com.unity.addressables/aa/Windows/StandaloneWindows
+          m_Data: Library/com.unity.addressables/aa/Windows/StandaloneWindows64
           m_Key: ContentRoot
         - m_AssemblyName: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
           m_ClassName: System.Boolean
