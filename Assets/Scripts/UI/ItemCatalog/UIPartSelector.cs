@@ -24,14 +24,6 @@ namespace UI.ItemCatalog
         {
             _selectionImage.DOFade(val ? 1 : 0 , 0.2f);
             
-            Debug.Log("Value changed");
-            // if (val)
-            // {
-            // }
-            //
-            // {
-            //     _selectionImage.enabled = false;
-            // }
         }
 
         public void OnPointerClick(PointerEventData eventData)

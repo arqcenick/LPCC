@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
@@ -13,10 +14,12 @@ namespace CharacterCustomizer
         [SerializeField] private AssetLabelReference _assetLabelReference;
 
         public IReadOnlyDictionary<CharacterSkinPart, List<CharacterSkinAsset>> SkinDictionary => _skinDictionary;
+        public IReadOnlyDictionary<CharacterItemPart, List<CharacterItemAsset>> PartDictionary => _partDictionary;
 
-        
+
         private Dictionary<CharacterSkinPart, List<CharacterSkinAsset>> _skinDictionary = new Dictionary<CharacterSkinPart, List<CharacterSkinAsset>>();
-    
+        private Dictionary<CharacterItemPart, List<CharacterItemAsset>> _partDictionary = new Dictionary<CharacterItemPart, List<CharacterItemAsset>>();
+
         private void Awake()
         {
             if (Instance != null)
@@ -36,25 +39,43 @@ namespace CharacterCustomizer
 
         public AsyncOperationHandle StartAsyncLoadTextures()
         {
-        
-            return Addressables.LoadAssetsAsync<CharacterSkinAsset>(_assetLabelReference, LoadSkins);
-        
+            return Addressables.LoadAssetsAsync<CharacterPartAsset>(_assetLabelReference, LoadParts);
         }
 
-        private void LoadSkins(CharacterSkinAsset skin)
+        private void LoadParts(CharacterPartAsset skin)
         {
-            Debug.Log("Loaded: " + skin.name);
-            if (_skinDictionary.ContainsKey(skin.CharacterSkinPart))
+            switch (skin)
             {
-                _skinDictionary[skin.CharacterSkinPart].Add(skin);
+                case CharacterItemAsset characterItemAsset:
+                    if (_partDictionary.ContainsKey(characterItemAsset.CharacterItemPart))
+                    {
+                        _partDictionary[characterItemAsset.CharacterItemPart].Add(characterItemAsset);
+                    }
+                    else
+                    {
+                        _partDictionary[characterItemAsset.CharacterItemPart] = new List<CharacterItemAsset>
+                        {
+                            characterItemAsset,
+                        };
+                    }
+                    break;
+                case CharacterSkinAsset characterSkinAsset:
+                    if (_skinDictionary.ContainsKey(characterSkinAsset.CharacterSkinPart))
+                    {
+                        _skinDictionary[characterSkinAsset.CharacterSkinPart].Add(characterSkinAsset);
+                    }
+                    else
+                    {
+                        _skinDictionary[characterSkinAsset.CharacterSkinPart] = new List<CharacterSkinAsset>
+                        {
+                            characterSkinAsset,
+                        };
+                    }
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(skin));
             }
-            else
-            {
-                _skinDictionary[skin.CharacterSkinPart] = new List<CharacterSkinAsset>
-                {
-                    skin,
-                };
-            }
+ 
         }
     }
 }

@@ -2,6 +2,24 @@
 using CharacterCustomizer;
 using UnityEngine.Events;
 
+public class UIEventSingleton
+{
+    private static UIEventSingleton _instance;
+
+    public static UIEventSingleton Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = new UIEventSingleton();
+            }
+            return _instance;
+        }
+    }
+    
+    
+}
 public class UIEventSingleton<T,U> where T : UIEvent<U>, new()
 {
     private static T _instance;

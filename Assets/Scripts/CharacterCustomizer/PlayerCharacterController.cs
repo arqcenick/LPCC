@@ -22,7 +22,7 @@ namespace CharacterCustomizer
 
         private void Awake()
         {
-            GameEventSingleton<OnCharacterSkinModified, CharacterSkinAsset>.Instance.AddListener(OnCharacterSkinModified);
+            GameEventSingleton<OnCharacterPartModified, CharacterPartAsset>.Instance.AddListener(OnCharacterPartModified);
             Addressables.LoadAssetsAsync<CharacterDataAsset>(new AssetLabelReference
             {
                 labelString = "Heroes",
@@ -51,9 +51,19 @@ namespace CharacterCustomizer
             UpdateModel();
         }
 
-        private void OnCharacterSkinModified(CharacterSkinAsset asset)
+        private void OnCharacterPartModified(CharacterPartAsset asset)
         {
-            _characterData.CharacterSkinAssets[asset.CharacterSkinPart] = asset;
+            switch (asset)
+            {
+                case CharacterItemAsset characterItemAsset:
+                    _characterData.CharacterItemAssets[characterItemAsset.CharacterItemPart] = characterItemAsset;
+                    break;
+                case CharacterSkinAsset characterSkinAsset:
+                    _characterData.CharacterSkinAssets[characterSkinAsset.CharacterSkinPart] = characterSkinAsset;
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(asset));
+            }
             UpdateModel();
         }
         
@@ -62,16 +72,25 @@ namespace CharacterCustomizer
             GameEventSingleton<OnCharacterModelDataUpdated, CharacterData>.Instance.Invoke(_characterData);
         }
 
-        private Dictionary<CharacterItemPart, CharacterPartAsset> LoadDefaultCharacterItems()
+        private Dictionary<CharacterItemPart, CharacterItemAsset> LoadDefaultCharacterItems()
         {
 
-            return null;
+            Dictionary<CharacterItemPart, CharacterItemAsset> parts = new Dictionary<CharacterItemPart, CharacterItemAsset>();
+            var characterDataAsset = _playerCharacters[PlayerPartAsset.CharacterClass.Marksman];
+            foreach (var characterItemAsset in characterDataAsset.CharacterItemAssets)
+            {
+                if (characterItemAsset != null)
+                {
+                    parts[characterItemAsset.CharacterItemPart] = characterItemAsset;
+                }
+            }
+            return parts;
         }
 
         private Dictionary<CharacterSkinPart, CharacterSkinAsset> LoadDefaultCharacterSkins()
         {
             Dictionary<CharacterSkinPart, CharacterSkinAsset> parts = new Dictionary<CharacterSkinPart, CharacterSkinAsset>();
-            var characterDataAsset = _playerCharacters[0];
+            var characterDataAsset = _playerCharacters[PlayerPartAsset.CharacterClass.Marksman];
             foreach (var characterSkinAsset in characterDataAsset.CharacterSkinAssets)
             {
                 if (characterSkinAsset != null)
@@ -79,7 +98,6 @@ namespace CharacterCustomizer
                     parts[characterSkinAsset.CharacterSkinPart] = characterSkinAsset;
                 }
             }
-
             return parts;
         }
         

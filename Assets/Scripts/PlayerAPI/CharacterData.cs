@@ -7,5 +7,5 @@ using CharacterCustomizer;
 public class CharacterData
 {
     public Dictionary<CharacterSkinPart, CharacterSkinAsset> CharacterSkinAssets;
-    public Dictionary<CharacterItemPart, CharacterPartAsset> CharacterItemAssets;
+    public Dictionary<CharacterItemPart, CharacterItemAsset> CharacterItemAssets;
 }

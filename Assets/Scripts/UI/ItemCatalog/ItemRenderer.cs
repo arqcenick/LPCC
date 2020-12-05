@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using CharacterCustomizer;
 using UI.ItemCatalog;
 using UnityEngine;
@@ -42,10 +43,22 @@ namespace UI
         //     }
         // }
         
-        public IEnumerator GetTextureOfSkin(CharacterSkinAsset skinAsset, Texture texture)
+        public IEnumerator GetTextureOfPart(CharacterPartAsset asset, Texture texture)
         {
 
-            _itemMannequin.SetCharacterSkinAsset(skinAsset);
+            Debug.Log(asset.name);
+            switch (asset)
+            {
+                case CharacterItemAsset characterItemAsset:
+                    _itemMannequin.SetCharacterItemAsset(characterItemAsset);
+                    break;
+                case CharacterSkinAsset characterSkinAsset:
+                    _itemMannequin.SetCharacterSkinAsset(characterSkinAsset);
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(asset));
+            }
+            
             yield return new WaitForEndOfFrame();
             Graphics.CopyTexture(_mannequinTexture, texture);
 
@@ -58,11 +71,6 @@ namespace UI
             }
             Instance = this;
         }
-
-
-        public Texture GetTextureOfItem(ref CharacterItemAsset item)
-        {
-            return new Texture2D(1024,1024);
-        }
+        
     }
 }

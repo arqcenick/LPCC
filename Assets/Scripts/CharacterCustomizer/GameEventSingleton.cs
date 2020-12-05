@@ -20,5 +20,5 @@ namespace CharacterCustomizer
 
     public abstract class GameEvent<T> : UnityEvent<T> { }
     public class OnCharacterModelDataUpdated : GameEvent<CharacterData> {}
-    public class OnCharacterSkinModified : GameEvent<CharacterSkinAsset>{}
+    public class OnCharacterPartModified : GameEvent<CharacterPartAsset>{}
 }

@@ -23,6 +23,7 @@
         BottomArmor,
         Weapon1,
         Weapon2,
+        Invalid,
 
     }
     public enum CharacterSkinPart

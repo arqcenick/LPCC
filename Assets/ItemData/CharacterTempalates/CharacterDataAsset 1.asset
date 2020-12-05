@@ -26,3 +26,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ee2ea5cc4d68ac24c972d4e66fe09eaa, type: 2}
   - {fileID: 11400000, guid: 106e587bef032d345b19260e9571fb71, type: 2}
   - {fileID: 0}
+  _characterItemAssets:
+  - {fileID: 11400000, guid: 9824113b744d8b146bce8d27b5640298, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _characterClass: 1

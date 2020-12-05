@@ -3,24 +3,12 @@ using UnityEngine;
 using UnityEngine.Serialization;
 
 
-public abstract class CharacterPartAsset : ScriptableObject
-{
-    
-}
-
-[CreateAssetMenu(menuName = "LPCC/CharacterItemAsset", fileName = "CharacterItemAsset", order = 1)]
-
-public class CharacterItemAsset : CharacterPartAsset
-{
-    
-}
-
 [CreateAssetMenu(menuName = "LPCC/CharacterSkinAsset", fileName = "CharacterSkinAsset", order = 0)]
 public class CharacterSkinAsset : CharacterPartAsset
 {
     protected bool Equals(CharacterSkinAsset other)
     {
-        return base.Equals(other) && _name == other._name;
+        return base.Equals(other) && Equals(BaseMap, other.BaseMap) && _name == other._name && characterSkinPart == other.characterSkinPart;
     }
 
     public override bool Equals(object obj)
@@ -35,20 +23,22 @@ public class CharacterSkinAsset : CharacterPartAsset
     {
         unchecked
         {
-            return (base.GetHashCode() * 397) ^ (_name != null ? _name.GetHashCode() : 0);
+            int hashCode = base.GetHashCode();
+            hashCode = (hashCode * 397) ^ (BaseMap != null ? BaseMap.GetHashCode() : 0);
+            hashCode = (hashCode * 397) ^ (_name != null ? _name.GetHashCode() : 0);
+            hashCode = (hashCode * 397) ^ (int) characterSkinPart;
+            return hashCode;
         }
     }
 
-    
     public Texture BaseMap;
-    
+    public CharacterSkinPart CharacterSkinPart => characterSkinPart;
+
     [SerializeField]
     private string _name = "default_item";
-    
 
-    
+
     [FormerlySerializedAs("_characterPart")] [SerializeField]
     private CharacterSkinPart characterSkinPart;
-
-    public CharacterSkinPart CharacterSkinPart => characterSkinPart;
+    
 }

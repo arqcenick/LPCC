@@ -58,6 +58,10 @@ public class ItemCameraStateController : MonoBehaviour
                 break;
             case CharacterPart.BottomArmor:
                 break;
+            case CharacterPart.Weapon1:
+                break;
+            case CharacterPart.Weapon2:
+                break;
             default:
                 throw new ArgumentOutOfRangeException(nameof(part), part, null);
         }
