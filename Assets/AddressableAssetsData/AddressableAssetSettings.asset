@@ -49,6 +49,20 @@ MonoBehaviour:
         m_Value: ServerData/[BuildTarget]
       - m_Id: b7a5df302912c784a9ae7c871353ad86
         m_Value: http://localhost/[BuildTarget]
+    - m_InheritedParent: 
+      m_Id: bfe44da363848eb44a24a5d637540e3f
+      m_ProfileName: Local
+      m_Values:
+      - m_Id: c60b0a4fec740434b81fa380455352f7
+        m_Value: '[UnityEditor.EditorUserBuildSettings.activeBuildTarget]'
+      - m_Id: aa8b909217dc58d4db7c10af1db75481
+        m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
+      - m_Id: a546b65727c28184e80035a182b80c66
+        m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
+      - m_Id: 121c46c950feb554bb2e1ae7cb2e3fd9
+        m_Value: ServerData/[BuildTarget]
+      - m_Id: b7a5df302912c784a9ae7c871353ad86
+        m_Value: http://localhost/[BuildTarget]
     m_ProfileEntryNames:
     - m_Id: c60b0a4fec740434b81fa380455352f7
       m_Name: BuildTarget
@@ -86,7 +100,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a905309b0d1f52748963269521648102, type: 2}
   - {fileID: 11400000, guid: 7588c860b1e71a44bb97ba4491549683, type: 2}
   - {fileID: 11400000, guid: 297c823b28463824fa3c5e239f380fef, type: 2}
-  m_ActiveProfileId: 53b4455ab02a6f643adf552863d867f0
+  m_ActiveProfileId: bfe44da363848eb44a24a5d637540e3f
   m_HostingServicesManager:
     m_HostingServiceInfos:
     - classRef: UnityEditor.AddressableAssets.HostingServices.HttpHostingService,
@@ -99,11 +113,11 @@ MonoBehaviour:
           m_Key: HostingServicePort
         - m_AssemblyName: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
           m_ClassName: System.String
-          m_Data: Library/com.unity.addressables/aa/Windows/StandaloneWindows64
+          m_Data: "C:\\Users\\yarki\\OneDrive\\Masa\xFCst\xFC\\LPCC_Build"
           m_Key: ContentRoot
         - m_AssemblyName: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
           m_ClassName: System.Boolean
-          m_Data: True
+          m_Data: False
           m_Key: IsEnabled
         - m_AssemblyName: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
           m_ClassName: System.String

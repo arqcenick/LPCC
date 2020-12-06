@@ -19,6 +19,9 @@ public class UIHoverFill : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         {
             _fillImage.fillClockwise = false;
         });
+        UIEventSingleton<OnButtonHovered>.Instance.Invoke();
+        
+        
     }
 
     public void OnPointerExit(PointerEventData eventData)

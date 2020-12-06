@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class UISoundManager : MonoBehaviour
 {
-
-    [SerializeField] private AudioClip _buttonHoverClip;
-
+    [SerializeField]
     private AudioSource _buttonHover;
     void Awake()
     {
@@ -15,7 +13,8 @@ public class UISoundManager : MonoBehaviour
 
     private void PlayButtonHovered()
     {
-        
+        Debug.Log("Playing sound");
+        _buttonHover.Play();
     }
 
     // Update is called once per frame

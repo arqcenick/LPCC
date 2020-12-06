@@ -131,8 +131,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8762480847052601929}
-  m_LocalRotation: {x: 0.18377525, y: 0.08614269, z: -0.016169598, w: 0.9790529}
-  m_LocalPosition: {x: -2.0219114, y: 4.5516505, z: -5.270993}
+  m_LocalRotation: {x: 0.053170156, y: 0.012528576, z: -0.00066714257, w: 0.99850667}
+  m_LocalPosition: {x: -2.3478563, y: 4.099435, z: -0.9554324}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8762480846692195323}
@@ -636,6 +636,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8762480847903165192}
   - component: {fileID: 8762480847903165193}
+  - component: {fileID: 5461709323586356346}
   m_Layer: 0
   m_Name: CharacterController
   m_TagString: Untagged
@@ -672,6 +673,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _assetLabelReference:
     m_LabelString: OutfitTextures
+--- !u!114 &5461709323586356346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8762480847903165207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99597dc74fdd7a5479d730622e2b1e01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8762480847931023311
 GameObject:
   m_ObjectHideFlags: 0
