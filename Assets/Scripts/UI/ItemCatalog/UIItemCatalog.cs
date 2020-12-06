@@ -7,6 +7,10 @@ using Utils;
 
 namespace UI.ItemCatalog
 {
+    /// <summary>
+    ///  A catalog holds two containers, second container is required for a double buffering and animated transitions
+    /// between item types.
+    /// </summary>
     public class UIItemCatalog : MonoBehaviour
     {
         [SerializeField] 
@@ -63,7 +67,12 @@ namespace UI.ItemCatalog
         }
 
    
-        
+        /// <summary>
+        /// This gathers textures for the item icons. It will take increasing amount of frames with larger number of
+        /// items.
+        /// </summary>
+        /// <param name="characterPart"></param>
+        /// <returns></returns>
         private IEnumerator GatherTextures(CharacterPart characterPart)
         {
             

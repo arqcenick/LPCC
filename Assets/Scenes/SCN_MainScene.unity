@@ -443,6 +443,10 @@ MonoBehaviour:
     m_VirtualCamera: {fileID: 1760952182}
     m_ActivateAfter: 0
     m_MinDuration: 0
+  - m_FullHash: -1530638633
+    m_VirtualCamera: {fileID: 787103952}
+    m_ActivateAfter: 0
+    m_MinDuration: 0
   m_DefaultBlend:
     m_Style: 1
     m_Time: 0.4
@@ -459,6 +463,8 @@ MonoBehaviour:
   - m_Hash: -1909111925
     m_ParentHash: 756556552
   - m_Hash: -191945993
+    m_ParentHash: 756556552
+  - m_Hash: -1530638633
     m_ParentHash: 756556552
 --- !u!4 &330276467
 Transform:

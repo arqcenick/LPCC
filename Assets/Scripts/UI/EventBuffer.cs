@@ -5,6 +5,9 @@ using UnityEngine;
 
 namespace UI
 {
+    /// <summary>
+    /// Event buffer makes it possible to listen for events and return as bool for the state machine.
+    /// </summary>
     public static class EventBuffer
     {
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]

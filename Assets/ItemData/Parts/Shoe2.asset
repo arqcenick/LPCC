@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Shoe2
   m_EditorClassIdentifier: 
   CharacterPart: {fileID: 11400000, guid: cfffb4379233d0440b3cca1e8747c4ff, type: 2}
-  Id: c4bc4f42-eada-4357-9236-f9299f2a2f9b
+  Id: 280befe6-c7ff-4959-8206-c38dc8dae174
   _characterClass: 2

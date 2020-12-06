@@ -6,6 +6,9 @@ using UnityEngine;
 
 namespace UI.ItemCatalog
 {
+    /// <summary>
+    /// An item container holds UISkinElements in a grid.
+    /// </summary>
     public class UIItemContainer : MonoBehaviour
     {
         public IReadOnlyList<UISkinElement> PartElements => _partElements;

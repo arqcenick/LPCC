@@ -1,0 +1,193 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Items
+  m_EditorClassIdentifier: 
+  m_GroupName: Items
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 6a0fa97bf28eff04894e7af8be844c65
+  m_SerializeEntries:
+  - m_GUID: 05cb37021de6a5d4d9661dba95e82f01
+    m_Address: Assets/ItemData/ShoulderArmor/ShoulderArmor 6.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - OutfitMeshes
+    - LoadOnStart
+    m_MainAsset: {fileID: 11400000, guid: 05cb37021de6a5d4d9661dba95e82f01, type: 2}
+    m_TargetAsset: {fileID: 11400000, guid: 05cb37021de6a5d4d9661dba95e82f01, type: 2}
+  - m_GUID: 085c9ec7753fec048a2d9cf2431d8783
+    m_Address: Assets/ItemData/ShoulderArmor/ShoulderArmor 2.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - OutfitMeshes
+    - LoadOnStart
+    m_MainAsset: {fileID: 11400000, guid: 085c9ec7753fec048a2d9cf2431d8783, type: 2}
+    m_TargetAsset: {fileID: 11400000, guid: 085c9ec7753fec048a2d9cf2431d8783, type: 2}
+  - m_GUID: 34c616ec292a18646b597409359e3046
+    m_Address: Assets/ItemData/TorsoArmor/TorsoArmor 6.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - OutfitMeshes
+    - LoadOnStart
+    m_MainAsset: {fileID: 11400000, guid: 34c616ec292a18646b597409359e3046, type: 2}
+    m_TargetAsset: {fileID: 11400000, guid: 34c616ec292a18646b597409359e3046, type: 2}
+  - m_GUID: 52d01034ccd3bde428b934826090cee9
+    m_Address: Assets/ItemData/ShoulderArmor/ShoulderArmor 4.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - OutfitMeshes
+    - LoadOnStart
+    m_MainAsset: {fileID: 11400000, guid: 52d01034ccd3bde428b934826090cee9, type: 2}
+    m_TargetAsset: {fileID: 11400000, guid: 52d01034ccd3bde428b934826090cee9, type: 2}
+  - m_GUID: 53c822113dbd08541af5607cee81389f
+    m_Address: Assets/ItemData/ShoulderArmor/ShoulderArmor 5.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - OutfitMeshes
+    - LoadOnStart
+    m_MainAsset: {fileID: 11400000, guid: 53c822113dbd08541af5607cee81389f, type: 2}
+    m_TargetAsset: {fileID: 11400000, guid: 53c822113dbd08541af5607cee81389f, type: 2}
+  - m_GUID: 7093ecd4a454f3e46ae988a42c58b509
+    m_Address: Assets/ItemData/TorsoArmor/TorsoArmor 1.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - OutfitMeshes
+    - LoadOnStart
+    m_MainAsset: {fileID: 11400000, guid: 7093ecd4a454f3e46ae988a42c58b509, type: 2}
+    m_TargetAsset: {fileID: 11400000, guid: 7093ecd4a454f3e46ae988a42c58b509, type: 2}
+  - m_GUID: 895eed65d65b82242988285d3bd498fb
+    m_Address: Assets/ItemData/TorsoArmor/TorsoArmor 3.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - OutfitMeshes
+    - LoadOnStart
+    m_MainAsset: {fileID: 11400000, guid: 895eed65d65b82242988285d3bd498fb, type: 2}
+    m_TargetAsset: {fileID: 11400000, guid: 895eed65d65b82242988285d3bd498fb, type: 2}
+  - m_GUID: 9824113b744d8b146bce8d27b5640298
+    m_Address: Assets/ItemData/Helmets/Helmet 1.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - OutfitMeshes
+    - LoadOnStart
+    m_MainAsset: {fileID: 11400000, guid: 9824113b744d8b146bce8d27b5640298, type: 2}
+    m_TargetAsset: {fileID: 11400000, guid: 9824113b744d8b146bce8d27b5640298, type: 2}
+  - m_GUID: ae4a3121971edfa4388d6a492de15174
+    m_Address: Assets/ItemData/TorsoArmor/TorsoArmor 5.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - OutfitMeshes
+    - LoadOnStart
+    m_MainAsset: {fileID: 11400000, guid: ae4a3121971edfa4388d6a492de15174, type: 2}
+    m_TargetAsset: {fileID: 11400000, guid: ae4a3121971edfa4388d6a492de15174, type: 2}
+  - m_GUID: c8a8507c5b12dc744b1103e66ef3203e
+    m_Address: Assets/ItemData/TorsoArmor/TorsoArmor 2.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - OutfitMeshes
+    - LoadOnStart
+    m_MainAsset: {fileID: 11400000, guid: c8a8507c5b12dc744b1103e66ef3203e, type: 2}
+    m_TargetAsset: {fileID: 11400000, guid: c8a8507c5b12dc744b1103e66ef3203e, type: 2}
+  - m_GUID: d04866e05dc24e8499b9a42164c04d7d
+    m_Address: Assets/ItemData/Helmets/Helmet 3.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - OutfitMeshes
+    - LoadOnStart
+    m_MainAsset: {fileID: 11400000, guid: d04866e05dc24e8499b9a42164c04d7d, type: 2}
+    m_TargetAsset: {fileID: 11400000, guid: d04866e05dc24e8499b9a42164c04d7d, type: 2}
+  - m_GUID: d0dc261a0cea79244a1da2a701e32cff
+    m_Address: Assets/ItemData/Helmets/Helmet 2.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - OutfitMeshes
+    - LoadOnStart
+    m_MainAsset: {fileID: 11400000, guid: d0dc261a0cea79244a1da2a701e32cff, type: 2}
+    m_TargetAsset: {fileID: 11400000, guid: d0dc261a0cea79244a1da2a701e32cff, type: 2}
+  - m_GUID: e4bd069a7dd8e75479cefaf6bfbda4ff
+    m_Address: Assets/ItemData/ShoulderArmor/ShoulderArmor 3.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - OutfitMeshes
+    - LoadOnStart
+    m_MainAsset: {fileID: 11400000, guid: e4bd069a7dd8e75479cefaf6bfbda4ff, type: 2}
+    m_TargetAsset: {fileID: 11400000, guid: e4bd069a7dd8e75479cefaf6bfbda4ff, type: 2}
+  - m_GUID: ef1601d8df8873248ae52773b5c0ee77
+    m_Address: Assets/ItemData/TorsoArmor/TorsoArmor 4.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - OutfitMeshes
+    - LoadOnStart
+    m_MainAsset: {fileID: 11400000, guid: ef1601d8df8873248ae52773b5c0ee77, type: 2}
+    m_TargetAsset: {fileID: 11400000, guid: ef1601d8df8873248ae52773b5c0ee77, type: 2}
+  - m_GUID: f7875dd72701f2a4d8178794b51dfcfb
+    m_Address: Assets/ItemData/TorsoArmor/TorsoArmor 7.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - OutfitMeshes
+    - LoadOnStart
+    m_MainAsset: {fileID: 11400000, guid: f7875dd72701f2a4d8178794b51dfcfb, type: 2}
+    m_TargetAsset: {fileID: 11400000, guid: f7875dd72701f2a4d8178794b51dfcfb, type: 2}
+  - m_GUID: fb072b63e274d644385da2fef079192f
+    m_Address: Assets/ItemData/ShoulderArmor/ShoulderArmor 1.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - OutfitMeshes
+    - LoadOnStart
+    m_MainAsset: {fileID: 11400000, guid: fb072b63e274d644385da2fef079192f, type: 2}
+    m_TargetAsset: {fileID: 11400000, guid: fb072b63e274d644385da2fef079192f, type: 2}
+  - m_GUID: 9bca8c3751f3ae04fae6bcccd8ed0167
+    m_Address: Assets/ItemData/MeleeWeapons/CharacterItemAsset.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - OutfitMeshes
+    - LoadOnStart
+    m_MainAsset: {fileID: 11400000, guid: 9bca8c3751f3ae04fae6bcccd8ed0167, type: 2}
+    m_TargetAsset: {fileID: 11400000, guid: 9bca8c3751f3ae04fae6bcccd8ed0167, type: 2}
+  - m_GUID: 39a07072b3ea9584e8d6968c7ba7f201
+    m_Address: Assets/ItemData/Shoe/Shoe 3.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - OutfitMeshes
+    - LoadOnStart
+    m_MainAsset: {fileID: 11400000, guid: 39a07072b3ea9584e8d6968c7ba7f201, type: 2}
+    m_TargetAsset: {fileID: 11400000, guid: 39a07072b3ea9584e8d6968c7ba7f201, type: 2}
+  - m_GUID: 7707bfd95b647bc4999c9b14aba054bb
+    m_Address: Assets/ItemData/Shoe/Shoe 4.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - OutfitMeshes
+    - LoadOnStart
+    m_MainAsset: {fileID: 11400000, guid: 7707bfd95b647bc4999c9b14aba054bb, type: 2}
+    m_TargetAsset: {fileID: 11400000, guid: 7707bfd95b647bc4999c9b14aba054bb, type: 2}
+  - m_GUID: e4037d719a45ca348b6f1b88888b9a25
+    m_Address: Assets/ItemData/Shoe/Shoe 5.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - OutfitMeshes
+    - LoadOnStart
+    m_MainAsset: {fileID: 11400000, guid: e4037d719a45ca348b6f1b88888b9a25, type: 2}
+    m_TargetAsset: {fileID: 11400000, guid: e4037d719a45ca348b6f1b88888b9a25, type: 2}
+  - m_GUID: 7ce39f9bbb5f810499f1588445842034
+    m_Address: Assets/ItemData/RangedWeapons/Crossbow 1.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - OutfitMeshes
+    - LoadOnStart
+    m_MainAsset: {fileID: 11400000, guid: 7ce39f9bbb5f810499f1588445842034, type: 2}
+    m_TargetAsset: {fileID: 11400000, guid: 7ce39f9bbb5f810499f1588445842034, type: 2}
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: b9d67faeea540f742ba870a3ecf150a7, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 41c7c8eaef522614b9affc0388a6bdcc, type: 2}
+    - {fileID: 11400000, guid: 99eacb5c42b953646bce40b1c32eb864, type: 2}

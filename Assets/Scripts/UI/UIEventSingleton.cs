@@ -2,6 +2,10 @@
 using CharacterCustomizer;
 using UnityEngine.Events;
 
+
+/// <summary>
+/// This is a very simple way to create an event bus with minimal code and type safety.
+/// </summary>
 public class UIEventSingleton<T,U> where T : UIEvent<U>, new()
 {
     private static T _instance;
@@ -44,3 +48,4 @@ public class OnHeroMenuSelected : UIEvent{}
 
 public class ForceItemTypeSelected : UIEvent<CharacterPart>{}
 public class OnButtonHovered : UIEvent{}
+public class OnButtonClicked : UIEvent{}

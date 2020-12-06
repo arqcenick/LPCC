@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
- 
+using UnityEngine.EventSystems;
+
 public class CharacterRotator : MonoBehaviour
 {
 
@@ -20,7 +21,7 @@ public class CharacterRotator : MonoBehaviour
      
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
         {
             _isRotating = true;
             _mouseReference = Input.mousePosition;

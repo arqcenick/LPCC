@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Beard1_Color0
   m_EditorClassIdentifier: 
   CharacterPart: {fileID: 11400000, guid: b6e6e651398354e4586841c27314a94b, type: 2}
-  Id: 08c2fe88-6155-47f4-8dd2-ecd4b9389f96
+  Id: 0de21dfb-fa12-48c6-b5bf-6a3ed96ee60b
   _characterClass: 2

@@ -9,8 +9,11 @@ public class PlayerPartAsset : ScriptableObject
     [SerializeField]
     public string Id = Guid.NewGuid().ToString();
 
+
+    //This will be used in the future for class specific items.
     [SerializeField]
     private CharacterClass _characterClass = CharacterClass.Arcanum;
+
 
     [Flags]
     public enum CharacterClass

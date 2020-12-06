@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Glove1
   m_EditorClassIdentifier: 
   CharacterPart: {fileID: 11400000, guid: acfc833da92c1194a986762a8e6536c8, type: 2}
-  Id: fd7a5ebc-51b4-473f-9ce9-26e8952fdcfe
+  Id: 1ac4d0f9-054b-4b5b-a505-f9da3f2679dd
   _characterClass: 2

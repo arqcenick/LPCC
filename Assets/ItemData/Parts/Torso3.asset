@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Torso3
   m_EditorClassIdentifier: 
   CharacterPart: {fileID: 11400000, guid: 9fa8ce96ab9af1c43988d19562ae310f, type: 2}
-  Id: 1b85c5e9-b97d-41b8-8111-607858fd0ea1
+  Id: 3b359005-ea97-4eaa-a79c-b1fd4a9cd8e2
   _characterClass: 2

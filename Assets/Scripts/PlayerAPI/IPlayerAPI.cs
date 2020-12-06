@@ -47,6 +47,9 @@ namespace PlayerAPI
 
     }
     
+    /// <summary>
+    /// This is a mock implementation of the possible backend API. Supports some amount of async.
+    /// </summary>
     public class MockPlayerAPI : IPlayerAPI
     {
         private int _lavaCoins;
@@ -106,12 +109,9 @@ namespace PlayerAPI
             {
                 foreach (var characterAsset in characterAssets.Result)
                 {
-                    Debug.Log(characterAsset.CharacterClass);
                     _characterDataDict[characterAsset.CharacterClass] = new CharacterData(characterAsset);
                 }
             }
         }
-        
-
     }
 }

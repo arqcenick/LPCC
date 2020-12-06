@@ -52,6 +52,10 @@
         Helmet,
         ShoulderArmor,
         TorsoArmor,
+        BottomArmor,
+        Weapon1,
+        Weapon2,
         Invalid,
+        
     }
 }

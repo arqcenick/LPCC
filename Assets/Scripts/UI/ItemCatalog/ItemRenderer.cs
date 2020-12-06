@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections;
 using CharacterCustomizer;
-using UI.ItemCatalog;
 using UnityEngine;
-using UnityEngine.Experimental.Rendering;
-using UnityEngine.UI;
 
-namespace UI
+namespace UI.ItemCatalog
 {
     public class ItemRenderer : MonoBehaviour
     {
@@ -21,16 +18,24 @@ namespace UI
         public IEnumerator GetTextureOfPart(CharacterPartAsset asset, Texture texture)
         {
             _itemMannequin.ResetModel();
+            _itemMannequin.SetWeaponVisibility(false);
             switch (asset)
             {
                 case CharacterItemAsset characterItemAsset:
                     _itemMannequin.SetCharacterItemAsset(characterItemAsset);
+                    if (characterItemAsset.CharacterItemPart == CharacterItemPart.Weapon1)
+                    {
+                        _itemMannequin.SetWeaponVisibility(true);
+                        _itemMannequin.SetCharacterVisibility(false);
+
+                    }
                     break;
                 case CharacterSkinAsset characterSkinAsset:
                     if (characterSkinAsset.CharacterSkinPart == CharacterSkinPart.Pants)
                     {
                         _itemMannequin.SetRobeVisibility(false);
                     }
+
                     _itemMannequin.SetCharacterSkinAsset(characterSkinAsset);
                     break;
                 default:
@@ -39,6 +44,7 @@ namespace UI
             
             yield return new WaitForEndOfFrame();
             _itemMannequin.SetRobeVisibility(true);
+            _itemMannequin.SetCharacterVisibility(true);
 
             Graphics.CopyTexture(_mannequinTexture, texture);
 

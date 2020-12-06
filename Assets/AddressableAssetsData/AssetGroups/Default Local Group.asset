@@ -17,30 +17,14 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: ceee6c651d9a5c94e9404db81bb325d0
   m_SerializeEntries:
-  - m_GUID: 05cb37021de6a5d4d9661dba95e82f01
-    m_Address: Assets/ItemData/ShoulderArmor/ShoulderArmor 6.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - OutfitMeshes
-    - LoadOnStart
-    m_MainAsset: {fileID: 11400000, guid: 05cb37021de6a5d4d9661dba95e82f01, type: 2}
-    m_TargetAsset: {fileID: 11400000, guid: 05cb37021de6a5d4d9661dba95e82f01, type: 2}
-  - m_GUID: 085c9ec7753fec048a2d9cf2431d8783
-    m_Address: Assets/ItemData/ShoulderArmor/ShoulderArmor 2.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - OutfitMeshes
-    - LoadOnStart
-    m_MainAsset: {fileID: 11400000, guid: 085c9ec7753fec048a2d9cf2431d8783, type: 2}
-    m_TargetAsset: {fileID: 11400000, guid: 085c9ec7753fec048a2d9cf2431d8783, type: 2}
   - m_GUID: 088e8d51eb5eb2d42a1407246d650167
     m_Address: Assets/ItemData/Pants/Pants 1.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - OutfitTextures
     - LoadOnStart
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_MainAsset: {fileID: 11400000, guid: 088e8d51eb5eb2d42a1407246d650167, type: 2}
+    m_TargetAsset: {fileID: 11400000, guid: 088e8d51eb5eb2d42a1407246d650167, type: 2}
   - m_GUID: 0d9c9f17032013b48ad7de30d3a9a09c
     m_Address: Assets/ItemData/Torso/Torso 4.asset
     m_ReadOnly: 0
@@ -63,24 +47,16 @@ MonoBehaviour:
     m_SerializedLabels:
     - OutfitTextures
     - LoadOnStart
-    m_MainAsset: {fileID: 11400000, guid: 215656e4943b8df46bc83b072ac06896, type: 2}
-    m_TargetAsset: {fileID: 11400000, guid: 215656e4943b8df46bc83b072ac06896, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 29e886c8cbc287240ac53605a94c5953
     m_Address: Assets/ItemData/BottomArmors/BottomArmor 2.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - OutfitTextures
     - LoadOnStart
-    m_MainAsset: {fileID: 11400000, guid: 29e886c8cbc287240ac53605a94c5953, type: 2}
-    m_TargetAsset: {fileID: 11400000, guid: 29e886c8cbc287240ac53605a94c5953, type: 2}
-  - m_GUID: 34c616ec292a18646b597409359e3046
-    m_Address: Assets/ItemData/TorsoArmor/TorsoArmor 6.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - OutfitMeshes
-    - LoadOnStart
-    m_MainAsset: {fileID: 11400000, guid: 34c616ec292a18646b597409359e3046, type: 2}
-    m_TargetAsset: {fileID: 11400000, guid: 34c616ec292a18646b597409359e3046, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 4661750b661e3c648b854231dcdaca41
     m_Address: Assets/ItemData/Torso/Torso 5.asset
     m_ReadOnly: 0
@@ -89,30 +65,6 @@ MonoBehaviour:
     - LoadOnStart
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
-  - m_GUID: 52d01034ccd3bde428b934826090cee9
-    m_Address: Assets/ItemData/ShoulderArmor/ShoulderArmor 4.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - OutfitMeshes
-    - LoadOnStart
-    m_MainAsset: {fileID: 11400000, guid: 52d01034ccd3bde428b934826090cee9, type: 2}
-    m_TargetAsset: {fileID: 11400000, guid: 52d01034ccd3bde428b934826090cee9, type: 2}
-  - m_GUID: 53c822113dbd08541af5607cee81389f
-    m_Address: Assets/ItemData/ShoulderArmor/ShoulderArmor 5.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - OutfitMeshes
-    - LoadOnStart
-    m_MainAsset: {fileID: 11400000, guid: 53c822113dbd08541af5607cee81389f, type: 2}
-    m_TargetAsset: {fileID: 11400000, guid: 53c822113dbd08541af5607cee81389f, type: 2}
-  - m_GUID: 7093ecd4a454f3e46ae988a42c58b509
-    m_Address: Assets/ItemData/TorsoArmor/TorsoArmor 1.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - OutfitMeshes
-    - LoadOnStart
-    m_MainAsset: {fileID: 11400000, guid: 7093ecd4a454f3e46ae988a42c58b509, type: 2}
-    m_TargetAsset: {fileID: 11400000, guid: 7093ecd4a454f3e46ae988a42c58b509, type: 2}
   - m_GUID: 88b97d2c393e88043a4208686b691c32
     m_Address: Assets/ItemData/Gloves/Glove 2.asset
     m_ReadOnly: 0
@@ -121,27 +73,11 @@ MonoBehaviour:
     - LoadOnStart
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
-  - m_GUID: 895eed65d65b82242988285d3bd498fb
-    m_Address: Assets/ItemData/TorsoArmor/TorsoArmor 3.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - OutfitMeshes
-    - LoadOnStart
-    m_MainAsset: {fileID: 11400000, guid: 895eed65d65b82242988285d3bd498fb, type: 2}
-    m_TargetAsset: {fileID: 11400000, guid: 895eed65d65b82242988285d3bd498fb, type: 2}
   - m_GUID: 8d9beb418ac372c4c8d7fb23cad107e4
     m_Address: Assets/ItemData/Gloves/Glove 3.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - OutfitTextures
-    - LoadOnStart
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
-  - m_GUID: 9824113b744d8b146bce8d27b5640298
-    m_Address: Assets/ItemData/Helmets/Helmet 1.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - OutfitMeshes
     - LoadOnStart
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
@@ -177,14 +113,6 @@ MonoBehaviour:
     - LoadOnStart
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
-  - m_GUID: ae4a3121971edfa4388d6a492de15174
-    m_Address: Assets/ItemData/TorsoArmor/TorsoArmor 5.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - OutfitMeshes
-    - LoadOnStart
-    m_MainAsset: {fileID: 11400000, guid: ae4a3121971edfa4388d6a492de15174, type: 2}
-    m_TargetAsset: {fileID: 11400000, guid: ae4a3121971edfa4388d6a492de15174, type: 2}
   - m_GUID: b284d36620b87b44b96056fae18705a5
     m_Address: Assets/ItemData/Beards/CharacterSkinAsset 1.asset
     m_ReadOnly: 0
@@ -207,16 +135,8 @@ MonoBehaviour:
     m_SerializedLabels:
     - OutfitTextures
     - LoadOnStart
-    m_MainAsset: {fileID: 11400000, guid: c73486fa28b3257419d7c21f1aea8e18, type: 2}
-    m_TargetAsset: {fileID: 11400000, guid: c73486fa28b3257419d7c21f1aea8e18, type: 2}
-  - m_GUID: c8a8507c5b12dc744b1103e66ef3203e
-    m_Address: Assets/ItemData/TorsoArmor/TorsoArmor 2.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - OutfitMeshes
-    - LoadOnStart
-    m_MainAsset: {fileID: 11400000, guid: c8a8507c5b12dc744b1103e66ef3203e, type: 2}
-    m_TargetAsset: {fileID: 11400000, guid: c8a8507c5b12dc744b1103e66ef3203e, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: cfffb4379233d0440b3cca1e8747c4ff
     m_Address: Assets/ItemData/Shoe/CharacterSkinAsset.asset
     m_ReadOnly: 0
@@ -225,22 +145,6 @@ MonoBehaviour:
     - LoadOnStart
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
-  - m_GUID: d04866e05dc24e8499b9a42164c04d7d
-    m_Address: Assets/ItemData/Helmets/Helmet 3.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - OutfitMeshes
-    - LoadOnStart
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
-  - m_GUID: d0dc261a0cea79244a1da2a701e32cff
-    m_Address: Assets/ItemData/Helmets/Helmet 2.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - OutfitMeshes
-    - LoadOnStart
-    m_MainAsset: {fileID: 11400000, guid: d0dc261a0cea79244a1da2a701e32cff, type: 2}
-    m_TargetAsset: {fileID: 11400000, guid: d0dc261a0cea79244a1da2a701e32cff, type: 2}
   - m_GUID: d75a7a0a79408a541858ae086e4f9df6
     m_Address: Assets/ItemData/Skin/Skin 1.asset
     m_ReadOnly: 0
@@ -255,8 +159,8 @@ MonoBehaviour:
     m_SerializedLabels:
     - OutfitTextures
     - LoadOnStart
-    m_MainAsset: {fileID: 11400000, guid: dd9201f67149760409895ee06c2ab7c2, type: 2}
-    m_TargetAsset: {fileID: 11400000, guid: dd9201f67149760409895ee06c2ab7c2, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: e00868b1e4165294db1a8582fe3988a9
     m_Address: Assets/ItemData/Pants/Pants 2.asset
     m_ReadOnly: 0
@@ -265,38 +169,22 @@ MonoBehaviour:
     - LoadOnStart
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
-  - m_GUID: e4bd069a7dd8e75479cefaf6bfbda4ff
-    m_Address: Assets/ItemData/ShoulderArmor/ShoulderArmor 3.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - OutfitMeshes
-    - LoadOnStart
-    m_MainAsset: {fileID: 11400000, guid: e4bd069a7dd8e75479cefaf6bfbda4ff, type: 2}
-    m_TargetAsset: {fileID: 11400000, guid: e4bd069a7dd8e75479cefaf6bfbda4ff, type: 2}
   - m_GUID: e6efa1273c9e65e42b04bf4bead58f45
     m_Address: Assets/ItemData/BottomArmors/BottomArmor 1.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - OutfitTextures
     - LoadOnStart
-    m_MainAsset: {fileID: 11400000, guid: e6efa1273c9e65e42b04bf4bead58f45, type: 2}
-    m_TargetAsset: {fileID: 11400000, guid: e6efa1273c9e65e42b04bf4bead58f45, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: ee2ea5cc4d68ac24c972d4e66fe09eaa
     m_Address: Assets/ItemData/Shoe/CharacterSkinAsset 1.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - OutfitTextures
     - LoadOnStart
-    m_MainAsset: {fileID: 11400000, guid: ee2ea5cc4d68ac24c972d4e66fe09eaa, type: 2}
-    m_TargetAsset: {fileID: 11400000, guid: ee2ea5cc4d68ac24c972d4e66fe09eaa, type: 2}
-  - m_GUID: ef1601d8df8873248ae52773b5c0ee77
-    m_Address: Assets/ItemData/TorsoArmor/TorsoArmor 4.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - OutfitMeshes
-    - LoadOnStart
-    m_MainAsset: {fileID: 11400000, guid: ef1601d8df8873248ae52773b5c0ee77, type: 2}
-    m_TargetAsset: {fileID: 11400000, guid: ef1601d8df8873248ae52773b5c0ee77, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: f34fcdcc37ece4c4481a12b259ed10da
     m_Address: Assets/ItemData/Torso/Torso 1.asset
     m_ReadOnly: 0
@@ -305,22 +193,6 @@ MonoBehaviour:
     - LoadOnStart
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
-  - m_GUID: f7875dd72701f2a4d8178794b51dfcfb
-    m_Address: Assets/ItemData/TorsoArmor/TorsoArmor 7.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - OutfitMeshes
-    - LoadOnStart
-    m_MainAsset: {fileID: 11400000, guid: f7875dd72701f2a4d8178794b51dfcfb, type: 2}
-    m_TargetAsset: {fileID: 11400000, guid: f7875dd72701f2a4d8178794b51dfcfb, type: 2}
-  - m_GUID: fb072b63e274d644385da2fef079192f
-    m_Address: Assets/ItemData/ShoulderArmor/ShoulderArmor 1.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - OutfitMeshes
-    - LoadOnStart
-    m_MainAsset: {fileID: 11400000, guid: fb072b63e274d644385da2fef079192f, type: 2}
-    m_TargetAsset: {fileID: 11400000, guid: fb072b63e274d644385da2fef079192f, type: 2}
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: b9d67faeea540f742ba870a3ecf150a7, type: 2}
   m_SchemaSet:

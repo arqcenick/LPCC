@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddec4b52a9d449cabfcb1feb4bc5aaf9, type: 3}
+  m_Name: CharacterDataAsset 1
+  m_EditorClassIdentifier: 
+  _characterSkinsPartValues:
+  - {fileID: 11400000, guid: d75a7a0a79408a541858ae086e4f9df6, type: 2}
+  - {fileID: 11400000, guid: eb7fd997b273861409ba9662d3e7bc70, type: 2}
+  - {fileID: 11400000, guid: eb7fd997b273861409ba9662d3e7bc70, type: 2}
+  - {fileID: 11400000, guid: b284d36620b87b44b96056fae18705a5, type: 2}
+  - {fileID: 11400000, guid: eb7fd997b273861409ba9662d3e7bc70, type: 2}
+  - {fileID: 11400000, guid: eb7fd997b273861409ba9662d3e7bc70, type: 2}
+  - {fileID: 11400000, guid: eb7fd997b273861409ba9662d3e7bc70, type: 2}
+  - {fileID: 11400000, guid: eb7fd997b273861409ba9662d3e7bc70, type: 2}
+  - {fileID: 11400000, guid: 088e8d51eb5eb2d42a1407246d650167, type: 2}
+  - {fileID: 11400000, guid: f34fcdcc37ece4c4481a12b259ed10da, type: 2}
+  - {fileID: 11400000, guid: ee2ea5cc4d68ac24c972d4e66fe09eaa, type: 2}
+  - {fileID: 11400000, guid: 106e587bef032d345b19260e9571fb71, type: 2}
+  - {fileID: 11400000, guid: e6efa1273c9e65e42b04bf4bead58f45, type: 2}
+  _characterItemAssets:
+  - {fileID: 11400000, guid: 9824113b744d8b146bce8d27b5640298, type: 2}
+  - {fileID: 11400000, guid: 085c9ec7753fec048a2d9cf2431d8783, type: 2}
+  - {fileID: 11400000, guid: 7093ecd4a454f3e46ae988a42c58b509, type: 2}
+  - {fileID: 11400000, guid: 7ce39f9bbb5f810499f1588445842034, type: 2}
+  - {fileID: 11400000, guid: 7ce39f9bbb5f810499f1588445842034, type: 2}
+  - {fileID: 11400000, guid: 9bca8c3751f3ae04fae6bcccd8ed0167, type: 2}
+  _characterClass: 1
+  _name: Jasperyx
+  _description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere,
+    nibh quis ultricies pharetra, sapien justo congue diam, non rhoncus dolor dolor
+    sed orci. Sed ut nisi ut nisi
+  _heroIcon: {fileID: 21300000, guid: 1b18da39160842c4787fa161f22da499, type: 3}
+  _traitIcons:
+  - {fileID: 21300000, guid: 51bfa69125516774fb0080863d023511, type: 3}
+  - {fileID: 21300000, guid: cb723a0621fafc24c99a0592cd982c61, type: 3}
+  - {fileID: 21300000, guid: 931e188bd3499644cba9bbc91039846f, type: 3}
+  _summary: '- Can be deadly in close combat with stealth.<br>- Effective at long
+    range.'

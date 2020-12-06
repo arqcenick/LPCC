@@ -154,8 +154,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 794798496784604249}
   m_HandleRect: {fileID: 794798496784604248}
   m_Direction: 3
-  m_Value: 0.5000277
-  m_Size: 0.57141745
+  m_Value: 0.99999964
+  m_Size: 0.5714174
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -668,6 +668,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isAlternative: 0
+  _titleText: {fileID: 1831428608481882276}
 --- !u!225 &5096523256769493287
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1608,7 +1609,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3053279555846747093, guid: 94d36d6564bd2524b99e3d3c26fac529, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 302.9929
+      value: 173.13956
       objectReference: {fileID: 0}
     - target: {fileID: 3053279555846747093, guid: 94d36d6564bd2524b99e3d3c26fac529, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

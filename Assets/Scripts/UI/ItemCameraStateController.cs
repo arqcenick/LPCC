@@ -15,7 +15,6 @@ public class ItemCameraStateController : MonoBehaviour
 
     private void OnItemTypeSelected(CharacterPart part)
     {
-        Debug.Log(part);
         switch (part)
         {
             case CharacterPart.Skin:
@@ -66,6 +65,7 @@ public class ItemCameraStateController : MonoBehaviour
             case CharacterPart.BottomArmor:
                 break;
             case CharacterPart.Weapon1:
+                _animator.Play("Weapon");
                 break;
             case CharacterPart.Weapon2:
                 break;

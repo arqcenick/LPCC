@@ -42,9 +42,9 @@ namespace CharacterCustomizer
             return Addressables.LoadAssetsAsync<CharacterPartAsset>(_assetLabelReference, LoadParts);
         }
 
-        private void LoadParts(CharacterPartAsset skin)
+        private void LoadParts(CharacterPartAsset partAsset)
         {
-            switch (skin)
+            switch (partAsset)
             {
                 case CharacterItemAsset characterItemAsset:
                     if (_partDictionary.ContainsKey(characterItemAsset.CharacterItemPart))
@@ -73,7 +73,7 @@ namespace CharacterCustomizer
                     }
                     break;
                 default:
-                    throw new ArgumentOutOfRangeException(nameof(skin));
+                    throw new ArgumentOutOfRangeException(nameof(partAsset));
             }
  
         }

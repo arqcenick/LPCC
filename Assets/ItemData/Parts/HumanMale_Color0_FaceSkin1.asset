@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: HumanMale_Color0_FaceSkin1
   m_EditorClassIdentifier: 
   CharacterPart: {fileID: 11400000, guid: d75a7a0a79408a541858ae086e4f9df6, type: 2}
-  Id: ecfd8ac3-b8c6-45ef-9bc3-c002f615ff5d
+  Id: c62f4016-b92b-4a36-8e8c-ba4b864d6aaa
   _characterClass: 2

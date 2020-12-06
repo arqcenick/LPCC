@@ -25,6 +25,8 @@ namespace UI.ItemCatalog
         public void OnPointerClick(PointerEventData eventData)
         {
             UIEventSingleton<OnItemTypeSelected, CharacterPart>.Instance.Invoke(_characterPart);
+            UIEventSingleton<OnButtonClicked>.Instance.Invoke();
+
         }
     }
 }

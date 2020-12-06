@@ -33,6 +33,8 @@ namespace UI
         public void OnPointerClick(PointerEventData eventData)
         {
             UIEventSingleton<OnHeroSelected, CharacterDataAsset>.Instance.Invoke(_reprenstedHero);
+            UIEventSingleton<OnButtonClicked>.Instance.Invoke();
+
         }
 
         public void SetHero(CharacterDataAsset characterDataAsset)

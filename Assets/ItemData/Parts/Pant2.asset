@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Pant2
   m_EditorClassIdentifier: 
   CharacterPart: {fileID: 11400000, guid: a8d59d9aa788b804fbe02c6cb3e9a7ec, type: 2}
-  Id: 0f53bec6-2858-44e7-8942-f2da32c6ded4
+  Id: 2e97dc22-5254-464b-beb5-cbdccef63cb6
   _characterClass: 2

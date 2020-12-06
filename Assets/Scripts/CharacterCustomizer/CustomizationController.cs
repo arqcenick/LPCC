@@ -51,10 +51,10 @@ namespace CharacterCustomizer
 
         public void SetCharacterItemAsset(CharacterItemAsset item)
         {
-
             _meshItems[item.CharacterItemPart].SetItem(item);
         }
 
+        //Sets the texture according to the mesh renderer.
         public void SetCharacterSkinAsset(CharacterSkinAsset skin)
         {
             switch (skin.CharacterSkinPart)
@@ -112,6 +112,17 @@ namespace CharacterCustomizer
         public void ResetModel()
         {
             SetCharacterModel(PlayerCharacterController.Instance.SelectedCharacterData);
+        }
+
+        public void SetWeaponVisibility(bool isVisible)
+        {
+            _meshItems[CharacterItemPart.Weapon1].gameObject.SetActive(isVisible);
+        }
+
+        public void SetCharacterVisibility(bool isVisible)
+        {
+            SetRobeVisibility(isVisible);
+            _meshRenderer.enabled = isVisible;
         }
     }
 }

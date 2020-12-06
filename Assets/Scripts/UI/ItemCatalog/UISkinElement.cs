@@ -50,6 +50,8 @@ namespace UI.ItemCatalog
         {
             
             GameEventSingleton<OnCharacterPartModified, CharacterPartAsset>.Instance.Invoke(_part);
+            UIEventSingleton<OnButtonClicked>.Instance.Invoke();
+
         }
         
     }
