@@ -2,6 +2,7 @@
 using System.Collections;
 using CharacterCustomizer;
 using UnityEngine;
+using UnityEngine.UI;
 using Utils;
 
 namespace UI.ItemCatalog
@@ -15,12 +16,13 @@ namespace UI.ItemCatalog
         private UIItemContainer _activeContainer;
         private int _activeContainerIndex = 0;
         private CharacterPart _currentCatalogPage;
+        private ScrollRect _scrollRect;
         
         private void Awake()
         {
 
             SetActiveContainers();
-
+            _scrollRect = GetComponent<ScrollRect>();
             UIEventSingleton<OnItemTypeSelected, CharacterPart>.Instance.AddListener(OnItemTypeSelected);
             
             
@@ -36,7 +38,6 @@ namespace UI.ItemCatalog
         private void OnItemTypeSelected(CharacterPart characterPart)
         {
             //Handle alternative case.
-
             
             if (_currentCatalogPage != characterPart)
             {
@@ -54,7 +55,8 @@ namespace UI.ItemCatalog
                 }
 
                 _activeContainer.Show();
-                
+                _scrollRect.content = (RectTransform) _activeContainer.transform;
+
                 CoroutineQueue.Instance.Enqueue(GatherTextures(characterPart));
 
             }
@@ -71,6 +73,7 @@ namespace UI.ItemCatalog
                 if (TextureLoader.Instance.PartDictionary.ContainsKey(itemPart))
                 {
                     var itemAssets = TextureLoader.Instance.PartDictionary[itemPart];
+                    
                     var partElements = _activeContainer.PartElements;
                     for (int i = 0; i < partElements.Count; i++)
                     {

@@ -25,7 +25,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f34fcdcc37ece4c4481a12b259ed10da, type: 2}
   - {fileID: 11400000, guid: ee2ea5cc4d68ac24c972d4e66fe09eaa, type: 2}
   - {fileID: 11400000, guid: 106e587bef032d345b19260e9571fb71, type: 2}
-  - {fileID: 11400000, guid: eb7fd997b273861409ba9662d3e7bc70, type: 2}
+  - {fileID: 11400000, guid: e6efa1273c9e65e42b04bf4bead58f45, type: 2}
   _characterItemAssets:
   - {fileID: 11400000, guid: 9824113b744d8b146bce8d27b5640298, type: 2}
   - {fileID: 11400000, guid: 085c9ec7753fec048a2d9cf2431d8783, type: 2}

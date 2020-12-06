@@ -49,7 +49,8 @@ public class ItemCameraStateController : MonoBehaviour
                 break;
             case CharacterPart.Belt:
                 break;
-            case CharacterPart.RobeLong:
+            case CharacterPart.RobeShort:
+                _animator.Play("Pants");
                 break;
             case CharacterPart.EndOfSkins:
                 break;
@@ -57,8 +58,10 @@ public class ItemCameraStateController : MonoBehaviour
                 _animator.Play("Head");
                 break;
             case CharacterPart.ShoulderArmor:
+                _animator.Play("Shoulder");
                 break;
             case CharacterPart.TorsoArmor:
+                _animator.Play("Torso");
                 break;
             case CharacterPart.BottomArmor:
                 break;
