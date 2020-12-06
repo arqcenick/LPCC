@@ -14,7 +14,12 @@ namespace CharacterCustomizer
         private static readonly int GlovesTex = Shader.PropertyToID("GlovesTex");
 
         
+        [SerializeField]
         private SkinnedMeshRenderer _meshRenderer;
+        [SerializeField]
+        private SkinnedMeshRenderer _shortRobe;
+        [SerializeField]
+        private SkinnedMeshRenderer _longRobe;
         private Dictionary<CharacterItemPart, MeshItem> _meshItems = new Dictionary<CharacterItemPart, MeshItem>();
 
         private void Awake()
@@ -24,7 +29,7 @@ namespace CharacterCustomizer
             {
                 _meshItems[meshItem.ItemPart] = meshItem;
             }
-            _meshRenderer = GetComponentInChildren<SkinnedMeshRenderer>();
+            
             GameEventSingleton<OnCharacterModelDataUpdated, CharacterData>.Instance.AddListener(SetCharacterModel);
         }
 
@@ -37,13 +42,16 @@ namespace CharacterCustomizer
 
             foreach (var itemAsset in data.CharacterItemAssets)
             {
+                var asset = itemAsset.Value;
                 SetCharacterItemAsset(itemAsset.Value);
+                
             }
         }
 
 
         public void SetCharacterItemAsset(CharacterItemAsset item)
         {
+
             _meshItems[item.CharacterItemPart].SetItem(item);
         }
 
@@ -60,7 +68,6 @@ namespace CharacterCustomizer
                     break;
                 case CharacterSkinPart.Beard:
                     _meshRenderer.material.SetTexture(BeardTex, skin.BaseMap);
-
                     break;
                 case CharacterSkinPart.Hair:
                     break;
@@ -84,11 +91,27 @@ namespace CharacterCustomizer
                     break;
                 case CharacterSkinPart.Belt:
                     break;
+                case CharacterSkinPart.RobeShort:
+                    _shortRobe.material.SetTexture(PantsTex, skin.BaseMap);
+                    break;
                 case CharacterSkinPart.RobeLong:
+                    _longRobe.material.SetTexture(PantsTex, skin.BaseMap);
+                    break;
+                case CharacterSkinPart.Invalid:
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
             }
+        }
+
+        public void SetRobeVisibility(bool isVisible)
+        {
+            _shortRobe.enabled = isVisible;
+        }
+
+        public void ResetModel()
+        {
+            SetCharacterModel(PlayerCharacterController.Instance.SelectedCharacterData);
         }
     }
 }

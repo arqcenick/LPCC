@@ -2,6 +2,7 @@
 using System.Collections;
 using CharacterCustomizer;
 using UnityEngine;
+using Utils;
 
 namespace UI.ItemCatalog
 {
@@ -21,7 +22,6 @@ namespace UI.ItemCatalog
             SetActiveContainers();
 
             UIEventSingleton<OnItemTypeSelected, CharacterPart>.Instance.AddListener(OnItemTypeSelected);
-            //UIEventSingleton.EventBus[OnCharacterPartSelected].Instance.AddListener(OnItemSelected);
             
             
         }
@@ -49,21 +49,18 @@ namespace UI.ItemCatalog
                     characterPart = UIAlternativeConverter.GetAlternativePart(characterPart);
                     if (characterPart == CharacterPart.Invalid)
                     {
-                        
                         return;
                     }
                 }
+
                 _activeContainer.Show();
-                StartCoroutine(GatherTextures(characterPart));
+                
+                CoroutineQueue.Instance.Enqueue(GatherTextures(characterPart));
 
             }
         }
 
-        private void OnItemSelected(int index)
-        {
-            var partAsset = _activeContainer.PartElements[index].Part;
-            GameEventSingleton<OnCharacterPartModified, CharacterPartAsset>.Instance.Invoke(partAsset);
-        }
+   
         
         private IEnumerator GatherTextures(CharacterPart characterPart)
         {
@@ -71,23 +68,34 @@ namespace UI.ItemCatalog
             if (characterPart > CharacterPart.EndOfSkins)
             {
                 CharacterItemPart itemPart = (CharacterItemPart) characterPart- (int) CharacterPart.EndOfSkins - 1;
-                var itemAssets = TextureLoader.Instance.PartDictionary[itemPart];
-                var partElements = _activeContainer.PartElements;
-                for (int i = 0; i < partElements.Count; i++)
+                if (TextureLoader.Instance.PartDictionary.ContainsKey(itemPart))
                 {
-                    if (i < itemAssets.Count)
+                    var itemAssets = TextureLoader.Instance.PartDictionary[itemPart];
+                    var partElements = _activeContainer.PartElements;
+                    for (int i = 0; i < partElements.Count; i++)
                     {
-                        partElements[i].gameObject.SetActive(true);
-                        partElements[i].SetPart(itemAssets[i]);
-                        yield return new WaitForEndOfFrame();
-                    }
-                    else
-                    {
-                        partElements[i].gameObject.SetActive(false);
-                    }
+                        if (i < itemAssets.Count)
+                        {
+                            partElements[i].gameObject.SetActive(true);
+                            partElements[i].SetPart(itemAssets[i]);
+                            if (itemAssets[i] == PlayerCharacterController
+                                .Instance
+                                .SelectedCharacterData
+                                .CharacterItemAssets[itemPart])
+                            {
+                                partElements[i].EmulateClick();
+                            }
+                            yield return new WaitForEndOfFrame();
+                        }
+                        else
+                        {
+                            partElements[i].gameObject.SetActive(false);
+                        }
                     
                 
+                    }
                 }
+               
             }
             else if(TextureLoader.Instance.SkinDictionary.ContainsKey((CharacterSkinPart) characterPart))
             {
@@ -100,6 +108,10 @@ namespace UI.ItemCatalog
                     {
                         partElements[i].gameObject.SetActive(true);
                         partElements[i].SetPart(skinAssets[i]);
+                        if (skinAssets[i] == PlayerCharacterController.Instance.SelectedCharacterData.CharacterSkinAssets[skinPart])
+                        {
+                            partElements[i].EmulateClick();
+                        }
                         yield return new WaitForEndOfFrame();
                     }
                     else
@@ -109,22 +121,10 @@ namespace UI.ItemCatalog
                     
                 
                 }
-                //ItemRenderer.Instance.GetTexturesOfSkins(skinAssets.ToArray(),elements);
-
 
             }
             
-  
-            
         }
-
-        private void OnEnable()
-        {
-        }
-
-        private void OnDisable()
-        {
-            
-        }
+        
     }
 }

@@ -18,6 +18,7 @@ public class PlayerPartAsset : ScriptableObject
         None = 0,
         Marksman = 1,
         Arcanum = 2,
+        Mysterite = 3,
     }
 
 }

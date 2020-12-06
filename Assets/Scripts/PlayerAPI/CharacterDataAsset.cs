@@ -11,6 +11,14 @@ public class CharacterDataAsset : ScriptableObject
 
     public PlayerPartAsset.CharacterClass CharacterClass => _characterClass;
 
+    public string Name => _name;
+
+    public string Description => _description;
+
+    public Sprite HeroIcon => _heroIcon;
+    public Sprite[] TraitIcons => _traitIcons;
+    public string Summary => _summary;
+
     [SerializeField]
     private List<CharacterSkinAsset> _characterSkinsPartValues;
 
@@ -19,4 +27,19 @@ public class CharacterDataAsset : ScriptableObject
 
     [SerializeField] 
     private PlayerPartAsset.CharacterClass _characterClass;
+
+    [SerializeField] 
+    private string _name;
+
+    [SerializeField]
+    private string _description;
+
+    [SerializeField] 
+    private Sprite _heroIcon;
+
+    [SerializeField]
+    private Sprite[] _traitIcons;
+
+    [SerializeField]
+    private string _summary;
 }

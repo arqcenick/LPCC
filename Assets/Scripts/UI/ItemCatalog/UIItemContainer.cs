@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using CharacterCustomizer;
 using DG.Tweening;
 using UnityEngine;
 
@@ -32,8 +33,8 @@ namespace UI.ItemCatalog
             _rectTransform.DOKill();
             _rectTransform.anchoredPosition = new Vector2(-_rectTransform.rect.width, 0);
             _canvasGroup.DOFade(1, 0.25f);
-
             _rectTransform.DOAnchorPosX(0, 0.25f);
         }
+        
     }
 }

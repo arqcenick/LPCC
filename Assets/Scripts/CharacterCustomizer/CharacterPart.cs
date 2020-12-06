@@ -15,6 +15,7 @@
         Shoe,
         Glove,
         Belt,
+        RobeShort,
         RobeLong,
         EndOfSkins,
         Helmet,
@@ -41,7 +42,9 @@
         Shoe,
         Glove,
         Belt,
+        RobeShort,
         RobeLong,
+        Invalid,
     }
 
     public enum CharacterItemPart
@@ -49,6 +52,6 @@
         Helmet,
         ShoulderArmor,
         TorsoArmor,
-        BottomArmor,
+        Invalid,
     }
 }

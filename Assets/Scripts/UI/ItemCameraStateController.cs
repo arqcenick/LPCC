@@ -15,6 +15,7 @@ public class ItemCameraStateController : MonoBehaviour
 
     private void OnItemTypeSelected(CharacterPart part)
     {
+        Debug.Log(part);
         switch (part)
         {
             case CharacterPart.Skin:
@@ -40,6 +41,8 @@ public class ItemCameraStateController : MonoBehaviour
                 _animator.Play("Torso");
                 break;
             case CharacterPart.Shoe:
+                _animator.Play("Shoe");
+
                 break;
             case CharacterPart.Glove:
                 _animator.Play("Gloves");
@@ -51,6 +54,7 @@ public class ItemCameraStateController : MonoBehaviour
             case CharacterPart.EndOfSkins:
                 break;
             case CharacterPart.Helmet:
+                _animator.Play("Head");
                 break;
             case CharacterPart.ShoulderArmor:
                 break;

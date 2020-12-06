@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 445b556cb53e406089ef67b73d5bee8a, type: 3}
   m_Name: Skin 2
   m_EditorClassIdentifier: 
-  BaseMap: {fileID: 2800000, guid: 5d4f622fca529db45a7b70aa1448e63e, type: 3}
+  BaseMap: {fileID: 2800000, guid: 6fe492b0300bf814aa75a072d521e38b, type: 3}
   _name: default_item
   characterSkinPart: 0

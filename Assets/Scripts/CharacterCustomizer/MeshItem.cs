@@ -18,7 +18,13 @@ namespace CharacterCustomizer
             {
                 Destroy(_children);
             }
-            _children = Instantiate(item.ItemPrefab, transform);
+
+            if (item.ItemPrefab != null)
+            {
+                _children = Instantiate(item.ItemPrefab, transform);
+                _children.layer = transform.gameObject.layer;
+            }
+
         }
     }
 }

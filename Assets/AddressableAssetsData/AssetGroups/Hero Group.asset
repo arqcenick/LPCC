@@ -24,6 +24,13 @@ MonoBehaviour:
     - Heroes
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
+  - m_GUID: cf180584d78b9b447a18052eaea23a1f
+    m_Address: Assets/ItemData/CharacterTempalates/CharacterDataAsset 2.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Heroes
+    m_MainAsset: {fileID: 11400000, guid: cf180584d78b9b447a18052eaea23a1f, type: 2}
+    m_TargetAsset: {fileID: 11400000, guid: cf180584d78b9b447a18052eaea23a1f, type: 2}
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: b9d67faeea540f742ba870a3ecf150a7, type: 2}
   m_SchemaSet:

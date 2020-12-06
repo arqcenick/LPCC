@@ -1,53 +1,98 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using PlayerAPI;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.Events;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using Random = UnityEngine.Random;
 
-
 namespace CharacterCustomizer
 {
 
     public class PlayerCharacterController : MonoBehaviour
     {
-        //[SerializeField] 
-        //private CharacterDataAsset _characterDataAsset;
 
-        private Dictionary<PlayerPartAsset.CharacterClass, CharacterDataAsset> _playerCharacters = new Dictionary<PlayerPartAsset.CharacterClass, CharacterDataAsset>();
+        public static PlayerCharacterController Instance;
+        
+        public CharacterData SelectedCharacterData => _characterData;
+
+        //private Dictionary<PlayerPartAsset.CharacterClass, CharacterDataAsset> _playerCharacters = new Dictionary<PlayerPartAsset.CharacterClass, CharacterDataAsset>();
         
         private CharacterData _characterData;
+        private CharacterData _savedCharacterData;
 
         private void Awake()
         {
             GameEventSingleton<OnCharacterPartModified, CharacterPartAsset>.Instance.AddListener(OnCharacterPartModified);
-            Addressables.LoadAssetsAsync<CharacterDataAsset>(new AssetLabelReference
+            UIEventSingleton<OnHeroSelected, CharacterDataAsset>.Instance.AddListener(ChangeCharacterDelegate);
+            if (Instance != null)
             {
-                labelString = "Heroes",
-            }, asset => {} ).Completed += OnCharactersLoaded;
+                Destroy(gameObject);
+                return;
+            }
+            Instance = this;
+            StartCoroutine(OnLoadComplete());
+
         }
 
-        private void OnCharactersLoaded(AsyncOperationHandle<IList<CharacterDataAsset>> characterAssets)
+        private IEnumerator OnLoadComplete()
         {
-            if (characterAssets.Status == AsyncOperationStatus.Succeeded)
+            while (!SPAPI.Instance.IsLoadComplete())
             {
-                foreach (var characterAsset in characterAssets.Result)
-                {
-                    _playerCharacters[characterAsset.CharacterClass] = characterAsset;
-                }
+                yield return null;
+            }
+            _characterData = SPAPI.Instance.LoadCharacter(SPAPI.Instance.GetDefaultCharacterClass());
+        }
+
+        public IEnumerator SaveCharacterData()
+        {
+            while (!SPAPI.Instance.IsLoadComplete())
+            {
+                yield return null;
+            }
+            SPAPI.Instance.SaveCharacter(_characterData.Copy());
+        }
+
+        public void ConfirmCharacterChanges()
+        {
+            StartCoroutine(SaveCharacterData());
+            UpdateModel();
+        }
+
+        public void RevertCharacterChanges()
+        {
+            _characterData = SPAPI.Instance.LoadCharacter(_characterData.Class);
+            UpdateModel();
+
+        }
+
+        public void ChangeCharacterDelegate(CharacterDataAsset character)
+        {
+            StartCoroutine(ChangeCharacter(character));
+        }
+        public IEnumerator ChangeCharacter(CharacterDataAsset character)
+        {
+            while (!SPAPI.Instance.IsLoadComplete())
+            {
+                yield return null;
             }
 
-            InitializeModel();
+            if (_characterData != null)
+            {
+                StartCoroutine(SaveCharacterData());
+            }
+            _characterData = SPAPI.Instance.LoadCharacter(character.CharacterClass);
+            UpdateModel();
         }
+
+ 
         
 
         private void InitializeModel()
         {
-            _characterData = new CharacterData();
-            _characterData.CharacterSkinAssets = LoadDefaultCharacterSkins();
-            _characterData.CharacterItemAssets = LoadDefaultCharacterItems();
+
             UpdateModel();
         }
 
@@ -71,35 +116,9 @@ namespace CharacterCustomizer
         {
             GameEventSingleton<OnCharacterModelDataUpdated, CharacterData>.Instance.Invoke(_characterData);
         }
+        
 
-        private Dictionary<CharacterItemPart, CharacterItemAsset> LoadDefaultCharacterItems()
-        {
-
-            Dictionary<CharacterItemPart, CharacterItemAsset> parts = new Dictionary<CharacterItemPart, CharacterItemAsset>();
-            var characterDataAsset = _playerCharacters[PlayerPartAsset.CharacterClass.Marksman];
-            foreach (var characterItemAsset in characterDataAsset.CharacterItemAssets)
-            {
-                if (characterItemAsset != null)
-                {
-                    parts[characterItemAsset.CharacterItemPart] = characterItemAsset;
-                }
-            }
-            return parts;
-        }
-
-        private Dictionary<CharacterSkinPart, CharacterSkinAsset> LoadDefaultCharacterSkins()
-        {
-            Dictionary<CharacterSkinPart, CharacterSkinAsset> parts = new Dictionary<CharacterSkinPart, CharacterSkinAsset>();
-            var characterDataAsset = _playerCharacters[PlayerPartAsset.CharacterClass.Marksman];
-            foreach (var characterSkinAsset in characterDataAsset.CharacterSkinAssets)
-            {
-                if (characterSkinAsset != null)
-                {
-                    parts[characterSkinAsset.CharacterSkinPart] = characterSkinAsset;
-                }
-            }
-            return parts;
-        }
+       
         
 
     }

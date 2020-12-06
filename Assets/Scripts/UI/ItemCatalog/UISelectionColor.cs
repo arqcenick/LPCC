@@ -1,4 +1,5 @@
-﻿using DG.Tweening;
+﻿using System;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -19,14 +20,21 @@ namespace UI.ItemCatalog
 
         private Color _originalColor;
         private Color _originalIconColor;
-
+        private Toggle _toggle;
         private void Awake()
         {
-            GetComponentInParent<Toggle>().onValueChanged.AddListener(OnSelectionChanged);
+            _toggle = GetComponentInParent<Toggle>();
+            _toggle.onValueChanged.AddListener(OnSelectionChanged);
+
             _originalColor = _selectionImage.color;
             _originalIconColor = _iconImage.color;
         }
-        
+
+        private void Start()
+        {
+            OnSelectionChanged(_toggle.isOn);
+        }
+
         public void OnSelectionChanged(bool isSelected)
         {
             if (isSelected)

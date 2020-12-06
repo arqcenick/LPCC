@@ -49,7 +49,7 @@ namespace Tests
             stateMachine.Add(overviewState);
             var heroSelectionState = new HeroSelectionState(uiAnimator, null);
             stateMachine.Add(heroSelectionState);
-            var itemSelectionState = new ItemSelectionState(uiAnimator);
+            var itemSelectionState = new ItemSelectionState(uiAnimator, null);
             stateMachine.Add(itemSelectionState);
             stateMachine.AddTransition(overviewState, heroSelectionState,
                 () => EventBuffer.IsTriggerSet<OnHeroMenuSelected>());
@@ -93,9 +93,9 @@ namespace Tests
             Animator uiAnimator = null;
             var overviewState = new OverviewState(uiAnimator);
             stateMachine.Add(overviewState);
-            var heroSelectionState = new HeroSelectionState(uiAnimator);
+            var heroSelectionState = new HeroSelectionState(uiAnimator, null);
             stateMachine.Add(heroSelectionState);
-            var itemSelectionState = new ItemSelectionState(uiAnimator);
+            var itemSelectionState = new ItemSelectionState(uiAnimator, null);
             stateMachine.Add(itemSelectionState);
             stateMachine.AddTransition(overviewState, heroSelectionState, () => EventBuffer.IsTriggerSet<OnHeroMenuSelected>());
             stateMachine.AddTransition(heroSelectionState, overviewState, () => EventBuffer.IsTriggerSet<OnOverviewMenuSelected>());

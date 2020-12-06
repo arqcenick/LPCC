@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 namespace UI.ItemCatalog
 {
-    public class UIPartSelector : MonoBehaviour, IPointerClickHandler
+    public class UIPartSelector : MonoBehaviour
     {
         [SerializeField] 
         private Image _selectionImage;
@@ -18,17 +18,12 @@ namespace UI.ItemCatalog
             _selectionImage.DOFade(0, 0);
             _toggle = GetComponent<Toggle>();
             _toggle.onValueChanged.AddListener(OnValueChanged);
+            OnValueChanged(_toggle.isOn);
         }
 
         private void OnValueChanged(bool val)
         {
             _selectionImage.DOFade(val ? 1 : 0 , 0.2f);
-            
-        }
-
-        public void OnPointerClick(PointerEventData eventData)
-        {
-            UIEventSingleton<OnCharacterPartSelected, int>.Instance.Invoke(transform.GetSiblingIndex());
         }
     }
 }

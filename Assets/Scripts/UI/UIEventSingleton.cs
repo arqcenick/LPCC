@@ -2,24 +2,6 @@
 using CharacterCustomizer;
 using UnityEngine.Events;
 
-public class UIEventSingleton
-{
-    private static UIEventSingleton _instance;
-
-    public static UIEventSingleton Instance
-    {
-        get
-        {
-            if (_instance == null)
-            {
-                _instance = new UIEventSingleton();
-            }
-            return _instance;
-        }
-    }
-    
-    
-}
 public class UIEventSingleton<T,U> where T : UIEvent<U>, new()
 {
     private static T _instance;
@@ -55,10 +37,10 @@ public abstract class UIEvent : UnityEvent { }
 
 public class OnItemTypeSelected : UIEvent<CharacterPart>{}
 
+public class OnHeroSelected : UIEvent<CharacterDataAsset>{}
 public class OnOverviewMenuSelected : UIEvent{}
 public class OnItemMenuSelected : UIEvent{}
 public class OnHeroMenuSelected : UIEvent{}
 
-public class OnCharacterPartSelected : UIEvent<int>{}
-
-public class OnCharacterSelected : UIEvent<PlayerPartAsset.CharacterClass>{}
+public class ForceItemTypeSelected : UIEvent<CharacterPart>{}
+public class OnButtonHovered : UIEvent{}

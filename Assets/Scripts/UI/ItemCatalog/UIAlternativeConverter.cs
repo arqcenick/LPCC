@@ -13,7 +13,7 @@ namespace UI.ItemCatalog
                 
             else if (characterPart == CharacterPart.Pants)
             {
-                return CharacterPart.BottomArmor;
+                return CharacterPart.RobeShort;
             }
             else
             {
